@@ -13,7 +13,7 @@ height = 36
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-wm-restack = bspwm
+wm-restack = i3
 
 radius = 0.0
 
@@ -27,11 +27,11 @@ module-margin = 2
 font-0 = sans-serif:size=12;3
 font-1 = Font Awesome 5 Free Solid:size=12;3
 
-modules-left = bspwm-desktops window-title
+modules-left = i3-desktops window-title
 modules-center = cpu memory disk
 modules-right = battery network pulseaudio-volume keyboard-layout date-and-time
 
-locale = en_US.UTF-8
+locale = en_AU.UTF-8
 
 tray-position = none
 tray-maxsize = 24
@@ -43,8 +43,8 @@ enable-ipc = true
 [settings]
 screenchange-reload = true
 
-[module/bspwm-desktops]
-type = internal/bspwm
+[module/i3-desktops]
+type = internal/i3
 
 format = <label-state>
 
