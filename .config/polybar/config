@@ -36,7 +36,6 @@ modules-right = battery network pulseaudio-volume keyboard-layout date-and-time
 locale = en_AU.UTF-8
 
 tray-position = right
-tray-maxsize = 36
 
 enable-ipc = true
 
