@@ -38,7 +38,7 @@ window {
     font:             "sans-serif 11";
     fullscreen:       false;
     padding:          1em;
-    width:            600px;
+    width:            60ch;
 }
 
 mainbox {
@@ -47,7 +47,7 @@ mainbox {
 }
 
 message {
-    padding:      10px;
+    padding:      1ch;
     border-color: @separatorcolor;
     border:       1px dash 0px 0px;
 }
@@ -57,18 +57,22 @@ textbox {
 }
 
 listview {
-    padding:      10px 0px 0px 0px;
+    padding:      1ch 0px 0px 0px;
     scrollbar:    false;
     border-color: @separatorcolor;
-    spacing:      2px;
+    spacing:      1ch;
     fixed-height: 0;
     border:       1px dash 0px 0px;
     lines:        5;
 }
 
 element {
-    padding: 10px;
+    padding: 1ch;
     border:  0;
+}
+
+element-icon {
+    size: 3ch;
 }
 
 element normal.normal {
@@ -140,7 +144,7 @@ button selected {
 }
 
 inputbar {
-    padding:    10px;
+    padding:    1ch;
     spacing:    0px;
     text-color: @normal-foreground;
     children:   [prompt, textbox-prompt-colon, entry, case-indicator];
