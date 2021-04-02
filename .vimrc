@@ -20,6 +20,7 @@ Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mbbill/undotree'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
