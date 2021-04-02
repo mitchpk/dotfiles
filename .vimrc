@@ -13,6 +13,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set noshowmode
 
 call plug#begin('~/.vim/plugged')
 
