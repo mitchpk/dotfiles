@@ -14,7 +14,6 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set noshowmode
-set noesckeys
 
 call plug#begin('~/.vim/plugged')
 
