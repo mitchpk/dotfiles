@@ -14,6 +14,7 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set noshowmode
+set noesckeys
 
 call plug#begin('~/.vim/plugged')
 
@@ -53,3 +54,7 @@ nnoremap <silent> <leader>- :vertical resize -5<CR>
 
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
