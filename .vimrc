@@ -36,6 +36,9 @@ let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
+let g:ycm_clangd_args=['--header-insertion=never']
+
+set completeopt+=popup
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
