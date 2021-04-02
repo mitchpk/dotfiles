@@ -1,5 +1,7 @@
 #!/bin/sh
+path=$(pwd)
 
-ln -sfr ./.config/* ~/.config
-ln -sfr ./.xinitrc ~
-cp ./.Xresources ~
+ln -sf $path/.config/* ~/.config
+ln -sf $path/.xinitrc ~
+ln -sf $path/.vimrc ~
+cp $path/.Xresources ~
