@@ -1,5 +1,6 @@
 set -x DPI (cat ~/.Xresources | grep -o 'dpi.*' | cut -f2- -d':' | sed -e 's/^[[:space:]]*//')
 set -x BAR_HEIGHT (math "36 * ($DPI / 96)")
+set -x TRAY_HEIGHT (math "$BAR_HEIGHT / 2")
 
 set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
