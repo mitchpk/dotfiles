@@ -18,6 +18,7 @@ exec --no-startup-id picom
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id polybar -r bar
 exec --no-startup-id unclutter -idle 3
+exec --no-startup-id dex -a
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
