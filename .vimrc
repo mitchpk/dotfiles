@@ -1,31 +1,36 @@
 syntax on
-
+filetype plugin indent on
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
+set nocompatible
+set autoindent
 set smartindent
-set nu
-set nowrap
 set smartcase
+set ignorecase
+set nowrap
 set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
 set incsearch
+set backspace=indent,eol,start
+set noruler
 set noshowmode
+set wildmenu
+set wildmode=full
+set laststatus=0
+set t_Co=256
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'Valloric/YouCompleteMe'
 Plug 'mbbill/undotree'
-Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
-colorscheme gruvbox
 set background=dark
 
 if executable('rg')
@@ -33,14 +38,15 @@ if executable('rg')
 endif
 
 let mapleader = " "
-let g:netrw_browse_split = 2
+"let g:netrw_browse_split = 2
 let g:netrw_banner = 0
-let g:netrw_winsize = 25
+"let g:netrw_winsize = 25
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
 let g:ycm_clangd_args=['--header-insertion=never']
+let g:ycm_enable_diagnostic_signs = 0
 
-set completeopt+=popup
+set completeopt-=preview
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
