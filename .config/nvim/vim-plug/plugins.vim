@@ -15,5 +15,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Language server
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
+    Plug 'joshdick/onedark.vim'
 
 call plug#end()
