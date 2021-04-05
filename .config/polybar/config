@@ -31,7 +31,7 @@ font-1 = Font Awesome 5 Free Solid:size=12;3
 
 modules-left = i3-desktops 
 modules-center = cpu memory disk
-modules-right = battery network pulseaudio-volume keyboard-layout date-and-time
+modules-right = battery pulseaudio-volume keyboard-layout date-and-time
 
 locale = en_AU.UTF-8
 
@@ -104,12 +104,6 @@ animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 500
-
-[module/network]
-type = internal/network
-interface = wlp1s0
-format-connected = 
-label-disconnected = 
 
 [module/pulseaudio-volume]
 type = internal/pulseaudio
