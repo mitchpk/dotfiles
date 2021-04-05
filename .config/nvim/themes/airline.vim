@@ -10,6 +10,10 @@ let g:airline_powerline_fonts = 1
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
+" disable 'INSERT COMPL'
+let g:airline_mode_map = {}
+let g:airline_mode_map['ic'] = 'INSERT'
+
 " Switch to your current theme
 let g:airline_theme = 'onedark'
 
