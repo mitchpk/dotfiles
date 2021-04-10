@@ -1,19 +1,45 @@
 [colors]
-background = #a0000000
-foreground = #ffffff
-focused = #bcecff
-urgent = #ffdb9e
+background = ${xrdb:background}
+background-wm = ${xrdb:color8}
+background-alt = ${xrdb:color0}
+foreground = ${xrdb:foreground}
+foreground-alt = ${xrdb:color7}
+primary = ${xrdb:color4}
+alert = ${xrdb:color1}
+
+[settings]
+format-foreground =
+format-underline = ${colors.primary}
+format-background = ${colors.background-alt}
+format-padding = 1
+format-overline =
+format-margin = 0
+format-offset =
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
 
 [bar/bar]
-bottom = true
+bottom = false
+
+cursor-click = pointer
+cursor-scroll = default
 
 width = 100%
-height = ${env:BAR_HEIGHT:36}
+height = ${env:BAR_HEIGHT:32}
 
 dpi = ${env:DPI:96}
 
 background = ${colors.background}
 foreground = ${colors.foreground}
+
+module-margin-left = 0
+module-margin-right = 1
+
+underline-size = 3
+overline-size = 0
 
 wm-restack = i3
 
@@ -21,52 +47,69 @@ radius = 0.0
 
 line-size = 1
 
-padding-left = 3
-padding-right = 4
+font-0 = Source Code Pro:size=10:style=Regular;3
+font-1 = Font Awesome 5 Free:style=Regular:size=12;3
+font-2 = Font Awesome 5 Free Solid:style=Solid:size=12;3
+font-3 = Font Awesome 5 Brands:size=12;3
+font-4 = Noto Sans Symbols:style=Regular:size=12;3
+font-5 = Noto Sans Symbols 2:style=Regular:size=12;3
 
-module-margin = 2
-
-font-0 = sans-serif:size=12;3
-font-1 = Font Awesome 5 Free Solid:size=12;3
-
-modules-left = i3-desktops 
-modules-center = cpu memory disk
-modules-right = battery pulseaudio-volume keyboard-layout date-and-time
+modules-left = i3 xwindow
+modules-right = pacman-packages battery pulseaudio-volume date-and-time
 
 locale = en_AU.UTF-8
 
 tray-position = right
 tray-maxsize = ${env:TRAY_HEIGHT:18}
+tray-background = ${colors.background-alt}
+tray-padding = 1
 
 enable-ipc = true
 
-[settings]
-screenchange-reload = true
-
-[module/i3-desktops]
+[module/i3]
 type = internal/i3
 
-format = <label-state>
-
+enable-scroll = true
 label-focused = %name%
-label-focused-foreground = ${colors.focused}
-label-focused-underline = ${colors.focused}
-label-focused-padding = 2
+label-focused-background = ${colors.background-wm}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 1
 
-label-occupied = %name%
-label-occupied-foreground = ${colors.foreground}
-label-occupied-padding = 2
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.foreground-alt}
+label-unfocused-padding = 1
 
-label-urgent = %name%
-label-urgent-foreground = ${colors.urgent}
-label-urgent-underline = ${colors.urgent}
-label-urgent-padding = 2
+label-urgent = %name%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
 
-label-empty =
+label-visible = %name%
+label-visible-padding = 1
+
+format-underline = ${colors.background}
+format-background = ${colors.background}
+format-padding =
+scroll-up = i3-desknext
+scroll-down = i3-deskprev
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:50:...%
+
+format-underline = ${colors.background}
+format-background = ${colors.background}
+format-padding =
 
 [module/cpu]
 type = internal/cpu
 label = %percentage% %
+
+[module/pacman-packages]
+type = custom/ipc
+hook-0 = paru -Qu | wc -l
+format-prefix = "📦 "
+click-left = $TERM -e paru
+initial = 1
 
 [module/memory]
 type = internal/memory
@@ -132,4 +175,4 @@ date-alt = %A, %e %B, %Y
 time = %H:%M
 time-alt = %H:%M:%S
 
-label = %date%   %time%
+label = %date% %time%
