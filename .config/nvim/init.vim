@@ -8,3 +8,4 @@ luafile $HOME/.config/nvim/lua/plugins/compe-config.lua
 luafile $HOME/.config/nvim/lua/lsp/go-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/rust-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/c-ls.lua
+luafile $HOME/.config/nvim/lua/lsp/ts-ls.lua
