@@ -108,7 +108,7 @@ label = %percentage% %
 type = custom/ipc
 hook-0 = paru -Qu | wc -l
 format-prefix = "📦 "
-click-left = $TERM -e paru
+click-left = $TERMINAL -e paru
 initial = 1
 
 [module/memory]
