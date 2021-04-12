@@ -17,7 +17,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 333333 --nofork
 exec --no-startup-id picom
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id polybar -r bar
-exec --no-startup-id unclutter -idle 3
 exec --no-startup-id dex -a
 
 # Use pactl to adjust volume in PulseAudio.
