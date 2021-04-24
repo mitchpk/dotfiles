@@ -37,3 +37,9 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set shortmess+=c                        " Disable the annoying 'pattern not found' popup
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+
+" Return to last edit position when opening files
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
