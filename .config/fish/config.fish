@@ -24,3 +24,7 @@ if status is-interactive
 
     set_onedark $onedark_options
 end
+
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]
+    exec startx
+end
