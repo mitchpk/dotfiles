@@ -160,8 +160,8 @@ format = <label-layout>
 [module/date-and-time]
 type = internal/date
 
-date = %a, %e %b
-date-alt = %A, %e %B, %Y
+date = %a, %d %b
+date-alt = %A, %d %B, %Y
 
 time = %H:%M
 time-alt = %H:%M:%S
