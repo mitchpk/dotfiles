@@ -43,3 +43,11 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
+" Shader file types
+autocmd BufNewFile,BufRead *.vert set ft=sl
+autocmd BufNewFile,BufRead *.frag set ft=sl
+autocmd BufNewFile,BufRead *.comp set ft=sl
+autocmd BufNewFile,BufRead *.sl set ft=sl
+autocmd BufNewFile,BufRead *.glsl set ft=sl
+autocmd BufNewFile,BufRead *.shader set ft=sl
