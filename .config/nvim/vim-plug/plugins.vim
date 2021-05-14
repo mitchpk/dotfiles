@@ -15,11 +15,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Language server
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
-    " Colourscheme
-    Plug 'joshdick/onedark.vim'
-    " Airline
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
     " File search
     Plug 'junegunn/fzf.vim'
 
