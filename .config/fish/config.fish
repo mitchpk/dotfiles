@@ -5,6 +5,8 @@ set -x TERMINAL "alacritty"
 
 set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
+alias v nvim
+
 if test $DPI -ge 144
 	set -x GDK_SCALE 2
 	set -x GDK_DPI_SCALE 0.5
