@@ -7,6 +7,26 @@ set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
 alias v nvim
 
+if [ -f ~/quotes/quotes ]
+	function quote
+		if test (count $argv) -gt 0
+			set -l pwd (pwd)
+			cd ~/quotes
+			git pull > /dev/null
+			echo $argv >> quotes
+			git commit -am "new quote" > /dev/null
+			git push > /dev/null
+			cd $pwd
+		else
+			random choice (cat ~/quotes/quotes)
+		end
+	end
+
+	function fish_greeting
+		cowsay -f tux (random choice (cat ~/quotes/quotes))
+	end
+end
+
 if test $DPI -ge 144
 	set -x GDK_SCALE 2
 	set -x GDK_DPI_SCALE 0.5
