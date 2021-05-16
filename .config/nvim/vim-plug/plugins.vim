@@ -15,6 +15,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Language server
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
+    " Colour scheme
+    Plug 'arcticicestudio/nord-vim'
     " File search
     Plug 'junegunn/fzf.vim'
 
