@@ -8,3 +8,6 @@ luafile $HOME/.config/nvim/lua/lsp/go-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/rust-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/c-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/ts-ls.lua
+luafile $HOME/.config/nvim/lua/lsp/html-ls.lua
+luafile $HOME/.config/nvim/lua/lsp/css-ls.lua
+luafile $HOME/.config/nvim/lua/lsp/json-ls.lua
