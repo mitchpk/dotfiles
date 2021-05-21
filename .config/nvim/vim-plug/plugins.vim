@@ -19,5 +19,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'arcticicestudio/nord-vim'
     " File search
     Plug 'junegunn/fzf.vim'
+    " LaTeX support
+    Plug 'lervag/vimtex'
 
 call plug#end()
