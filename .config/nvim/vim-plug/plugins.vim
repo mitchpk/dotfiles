@@ -21,5 +21,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim'
     " LaTeX support
     Plug 'lervag/vimtex'
+    " Discord IPC
+    Plug 'andweeb/presence.nvim'
 
 call plug#end()
