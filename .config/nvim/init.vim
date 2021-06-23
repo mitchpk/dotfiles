@@ -13,3 +13,4 @@ luafile $HOME/.config/nvim/lua/lsp/html-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/css-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/json-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/latex-ls.lua
+luafile $HOME/.config/nvim/lua/lsp/vue-ls.lua
