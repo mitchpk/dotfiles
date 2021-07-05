@@ -156,10 +156,10 @@ format = <label-layout>
 [module/date-and-time]
 type = internal/date
 
-date = %a, %d %b
-date-alt = %A, %d %B, %Y
+date = %d/%m/%y
+date-alt = %A%e %B, %Y
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = %I:%M %p
+time-alt = %I:%M:%S %p
 
 label = %date% %time%
