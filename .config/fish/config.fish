@@ -23,7 +23,7 @@ if [ -f ~/quotes/quotes ]
 	end
 
 	function fish_greeting
-		cowsay -f tux (random choice (cat ~/quotes/quotes))
+		cowsay (random choice (cat ~/quotes/quotes))
 	end
 end
 
