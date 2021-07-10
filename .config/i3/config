@@ -6,6 +6,7 @@ font pango:Fira Mono 10
 new_window pixel 1
 new_float normal
 hide_edge_borders none
+focus_follows_mouse no
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
