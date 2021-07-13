@@ -157,7 +157,7 @@ format = <label-layout>
 type = internal/date
 
 date = %d/%m/%y
-date-alt = %A%e %B, %Y
+date-alt = %A %e %B, %Y
 
 time = %I:%M %p
 time-alt = %I:%M:%S %p
