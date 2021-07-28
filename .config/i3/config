@@ -39,6 +39,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
+# start a file manager
+bindsym $mod+Shift+Return exec --no-startup-id nemo
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
