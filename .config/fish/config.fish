@@ -2,6 +2,7 @@ set -x DPI (cat ~/.Xresources | grep -o 'dpi.*' | cut -f2- -d':' | sed -e 's/^[[
 set -x BAR_HEIGHT (math "32 * ($DPI / 96)")
 set -x TRAY_HEIGHT (math "$BAR_HEIGHT / 2")
 set -x TERMINAL "alacritty"
+set -x EDITOR "nvim"
 
 set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
