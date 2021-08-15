@@ -26,4 +26,3 @@ require'compe'.setup {
     treesitter = true;
   };
 }
-
