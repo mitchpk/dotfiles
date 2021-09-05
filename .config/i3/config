@@ -1,3 +1,4 @@
+# Use Super as mod key
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -35,6 +36,9 @@ bindsym Print exec --no-startup-id flameshot gui
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# Default floating windows
+for_window [class="runelite"] floating enable
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
