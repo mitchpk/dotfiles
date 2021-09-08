@@ -21,5 +21,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim'
     " LaTeX support
     Plug 'lervag/vimtex'
+    " Rust!
+    Plug 'rust-lang/rust.vim'
 
 call plug#end()
