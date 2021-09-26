@@ -60,9 +60,8 @@
 #waybar {
     background: @bg;
     color: @light;
-    font-family: Noto Sans;
-    font-size: 12px;
-    font-weight: bold;
+    font-family: Fira Mono;
+    font-size: 14px;
 }
 
 /* Each module */
