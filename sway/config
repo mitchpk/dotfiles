@@ -262,5 +262,6 @@ smart_borders on
 # Default floating windows
 for_window [class="runelite"] floating enable
 for_window [class="MEGAsync"] floating enable
+for_window [window_type="popup_menu"] floating enable
 
 include /etc/sway/config.d/*
