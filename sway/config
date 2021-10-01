@@ -4,14 +4,15 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-#output eDP-1 scale 1.75
+output eDP-1 scale 2
+xwayland scale 2
 font pango:Fira Mono 10
 default_border pixel 1
 default_floating_border normal
 hide_edge_borders none
 focus_follows_mouse no
 
-seat seat0 xcursor_theme Breeze_Snow
+seat seat0 xcursor_theme Breeze_Snow 48
 
 ### Variables
 #
@@ -30,6 +31,7 @@ set $term alacritty
 set $menu rofi -show drun | xargs swaymsg exec --
 
 # Autorun commands
+exec xrdb ~/.Xresources
 exec waybar
 exec gammashift
 exec dex -a

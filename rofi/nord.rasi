@@ -43,7 +43,7 @@
     selected-urgent-foreground: var(background);
 }
 element {
-    padding: 5px;
+    padding: 0.4em;
     border:  0;
     cursor:  pointer;
 }
@@ -96,7 +96,7 @@ element-icon {
     cursor: inherit;
 }
 window {
-    padding: 0px;
+    padding: 0;
     background-color: var(background);
 }
 mainbox {
@@ -105,13 +105,12 @@ mainbox {
     spacing: 0;
 }
 message {
-    padding: 1px;
+    padding: 0.05em;
 }
 textbox {
     text-color: var(foreground);
 }
 listview {
-    padding: 4px 0px 0px;
     padding: 0;
     scrollbar: true;
     lines: 10;
@@ -119,7 +118,7 @@ listview {
 }
 scrollbar {
     padding: 0;
-    handle-width: 10px;
+    handle-width: 0.5em;
     handle-color: var(nord2);
 }
 button {
@@ -131,13 +130,13 @@ button selected {
     text-color: var(selected-normal-foreground);
 }
 inputbar {
-    padding: 6px;
+    padding: 0.3em;
     text-color: var(normal-foreground);
     background-color: var(nord3);
     children: [ entry ];
 }
 entry {
-    padding: 6px;
+    padding: 0.3em;
     cursor: text;
     text-color: var(normal-foreground);
     background-color: rgba(0, 0, 0, 0%);
