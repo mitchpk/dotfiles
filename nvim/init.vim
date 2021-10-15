@@ -16,3 +16,4 @@ luafile $HOME/.config/nvim/lua/lsp/json-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/latex-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/vue-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/python-ls.lua
+luafile $HOME/.config/nvim/lua/lsp/gdscript-ls.lua
