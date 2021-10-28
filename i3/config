@@ -21,6 +21,7 @@ exec --no-startup-id polybar -r bar
 exec --no-startup-id dex -a
 exec --no-startup-id nvidia-settings -l
 exec --no-startup-id redshift 
+exec --no-startup-id ~/.config/i3/alternating-layouts.py
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -170,7 +171,4 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-gaps inner 10
-smart_gaps on
 smart_borders on

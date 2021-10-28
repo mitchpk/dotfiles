@@ -1,24 +1,8 @@
-[colors]
-background = ${xrdb:background}
-background-wm = ${xrdb:color8}
-background-alt = ${xrdb:color0}
-foreground = ${xrdb:foreground}
-foreground-alt = ${xrdb:color7}
-primary = ${xrdb:color4}
-alert = ${xrdb:color1}
-
-[settings]
-format-foreground =
-format-underline = ${colors.primary}
-format-background = ${colors.background-alt}
-format-padding = 1
-format-overline =
-format-margin = 0
-format-offset =
-screenchange-reload = true
-
 [bar/bar]
 bottom = false
+
+background = #24292f
+foreground = #ffffff
 
 cursor-click = pointer
 cursor-scroll = default
@@ -28,34 +12,24 @@ height = ${env:BAR_HEIGHT:32}
 
 dpi = ${env:DPI:96}
 
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-module-margin-left = 0
-module-margin-right = 1
-
-underline-size = 3
-overline-size = 0
-
-wm-restack = i3
+padding-left = 1
+padding-right = 1
+module-margin = 1
 
 radius = 0.0
 
-line-size = 1
+font-0 = Fira Mono:size=10:style=Regular;5
+font-1 = Font Awesome 5 Free:style=Regular:size=12;5
+font-2 = Font Awesome 5 Free Solid:style=Solid:size=12;5
+font-3 = Font Awesome 5 Brands:size=12;5
 
-font-0 = Fira Mono:size=10:style=Regular;3
-font-1 = Font Awesome 5 Free:style=Regular:size=12;3
-font-2 = Font Awesome 5 Free Solid:style=Solid:size=12;3
-font-3 = Font Awesome 5 Brands:size=12;3
-
-modules-left = i3 xwindow
+modules-left = i3
 modules-right = battery pulseaudio-volume date-and-time
 
 locale = en_AU.UTF-8
 
 tray-position = right
 tray-maxsize = ${env:TRAY_HEIGHT:18}
-tray-background = ${colors.background-alt}
 tray-padding = 1
 
 enable-ipc = true
@@ -65,23 +39,23 @@ type = internal/i3
 
 enable-scroll = true
 label-focused = %name%
-label-focused-background = ${colors.background-wm}
-label-focused-underline = ${colors.primary}
+label-focused-foreground = #6eb9ee
+label-focused-background = #24292f
+label-focused-underline = #ffffff
 label-focused-padding = 1
 
 label-unfocused = %name%
-label-unfocused-foreground = ${colors.foreground-alt}
+label-visible-underline = #ffffff
 label-unfocused-padding = 1
 
-label-urgent = %name%!
-label-urgent-background = ${colors.alert}
+label-urgent = %name%
+label-urgent-foreground = #ffffff
+label-urgent-background = #dc6f7a
 label-urgent-padding = 1
 
 label-visible = %name%
 label-visible-padding = 1
 
-format-underline = ${colors.background}
-format-background = ${colors.background}
 format-padding =
 scroll-up = i3-desknext
 scroll-down = i3-deskprev
@@ -90,8 +64,6 @@ scroll-down = i3-deskprev
 type = internal/xwindow
 label = %title:0:50:...%
 
-format-underline = ${colors.background}
-format-background = ${colors.background}
 format-padding =
 
 [module/cpu]

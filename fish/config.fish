@@ -7,7 +7,11 @@ set -x npm_config_prefix "$HOME/.local"
 
 set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
+set -g theme_display_date no
+
 alias v nvim
+# Swap ESC with CapsLock
+setxkbmap -option caps:swapescape
 
 if [ -f ~/quotes/quotes ]
 	function quote
@@ -25,7 +29,7 @@ if [ -f ~/quotes/quotes ]
 	end
 
 	function fish_greeting
-		cowsay (random choice (cat ~/quotes/quotes))
+		#cowsay (random choice (cat ~/quotes/quotes))
 	end
 end
 
