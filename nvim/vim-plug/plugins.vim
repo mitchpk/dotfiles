@@ -18,7 +18,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Colour scheme
     Plug 'arcticicestudio/nord-vim'
     " File search
-    Plug 'junegunn/fzf.vim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
     " LaTeX support
     Plug 'lervag/vimtex'
     " Rust!

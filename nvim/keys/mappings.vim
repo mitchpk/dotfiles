@@ -6,7 +6,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " File search
-nnoremap <leader>d <cmd>FZF<CR>
+nnoremap <leader>d <cmd>Telescope find_files<CR>
 
 " Buffer management
 nnoremap <TAB> <cmd>bnext<CR>
