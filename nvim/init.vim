@@ -1,6 +1,7 @@
-source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/general/settings.vim
+source $HOME/.config/nvim/general/theme.vim
+source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/plug-config/lsp-config.vim
 source $HOME/.config/nvim/plug-config/vimtex-config.vim
 luafile $HOME/.config/nvim/lua/plugins/compe-config.lua
@@ -17,3 +18,4 @@ luafile $HOME/.config/nvim/lua/lsp/vue-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/python-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/gdscript-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/dart-ls.lua
+luafile $HOME/.config/nvim/lua/lsp/svelte-ls.lua
