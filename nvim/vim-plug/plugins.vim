@@ -13,8 +13,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Language server
     Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/nvim-compe'
-    " Colour scheme
-    Plug 'morhetz/gruvbox'
     " File search
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
