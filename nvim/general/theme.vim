@@ -2,9 +2,7 @@ set background=dark
 
 highlight clear SignColumn
 highlight ColorColumn  ctermbg=234
-highlight LineNr       ctermbg=234 ctermfg=14
-highlight CursorLineNr ctermbg=23 ctermfg=7
-highlight CursorLine   ctermbg=236
+highlight LineNr       ctermfg=8
 highlight IncSearch    ctermbg=3   ctermfg=1
 highlight Search       ctermbg=1   ctermfg=3
 highlight Visual       ctermbg=1   ctermfg=16
