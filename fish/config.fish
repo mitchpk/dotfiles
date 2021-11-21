@@ -10,8 +10,7 @@ set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 set -g theme_display_date no
 
 alias v nvim
-# Swap ESC with CapsLock
-setxkbmap -option caps:swapescape
+alias g git
 
 if [ -f ~/quotes/quotes ]
 	function quote
