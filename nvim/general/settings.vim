@@ -28,6 +28,7 @@ set tabstop=4
 set shiftwidth=4 
 set expandtab 
 set laststatus=0
+set scrolloff=10
 set noruler
 set number
 set shortmess+=c
