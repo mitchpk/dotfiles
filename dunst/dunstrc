@@ -3,7 +3,7 @@
     follow = mouse
     width = 320
     height = 320
-    origin = top-right
+    origin = bottom-right
     offset = 15x15
     scale = 0
     notification_limit = 0
@@ -15,7 +15,7 @@
     horizontal_padding = 10
     text_icon_padding = 0
     frame_width = 1
-    frame_color = "#232323"
+    frame_color = "#333333"
     separator_color = frame
     sort = yes
     idle_threshold = 120
@@ -45,12 +45,12 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#232323"
+    background = "#333333"
     foreground = "#a8a8a8"
     timeout = 10
 
 [urgency_normal]
-    background = "#232323"
+    background = "#333333"
     foreground = "#a8a8a8"
     timeout = 10
 
