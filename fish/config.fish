@@ -1,7 +1,6 @@
 set -x EDITOR "nvim"
 set -x COLORTERM truecolor
 set -x npm_config_prefix "$HOME/.local"
-set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
 set -g theme_display_date no
 
