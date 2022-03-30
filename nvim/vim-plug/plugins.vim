@@ -23,5 +23,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Snippets
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
+    " Syntax
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
