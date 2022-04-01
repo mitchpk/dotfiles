@@ -6,7 +6,6 @@ source $HOME/.config/nvim/plug-config/lsp.vim
 source $HOME/.config/nvim/plug-config/vimtex.vim
 luafile $HOME/.config/nvim/lua/plugins/compe.lua
 luafile $HOME/.config/nvim/lua/plugins/autopairs.lua
-luafile $HOME/.config/nvim/lua/plugins/treesitter.lua
 luafile $HOME/.config/nvim/lua/lsp/go-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/rust-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/c-ls.lua
