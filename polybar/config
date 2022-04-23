@@ -24,7 +24,7 @@ font-2 = Font Awesome 6 Free Solid:style=Solid:size=12;3
 font-3 = Font Awesome 6 Brands:size=12;3
 
 modules-left = i3
-modules-right = battery pulseaudio-volume date-and-time
+modules-right = battery pulseaudio-volume date-and-time keyboard-layout
 
 locale = en_AU.UTF-8
 
@@ -124,6 +124,7 @@ ramp-volume-2 = 
 type = internal/xkeyboard
 
 format = <label-layout>
+label-layout = %variant%
 
 [module/date-and-time]
 type = internal/date
