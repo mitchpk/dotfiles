@@ -1,11 +1,8 @@
 # Use Super as mod key
 set $mod Mod4
 
-# Swap ESC with CapsLock
-exec --no-startup-id setxkbmap -option caps:swapescape
-
-# Colemak DH
-exec --no-startup-id setxkbmap us,us -variant ,colemak_dh -option grp:alt_caps_toggle
+# Colemak DH and swap ESC with CapsLock
+exec --no-startup-id setxkbmap us,us -variant ,colemak_dh -option grp:alt_caps_toggle,caps:swapescape
 
 # Increase keyboard repeat rate
 exec --no-startup-id xset r rate 250 33
