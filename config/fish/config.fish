@@ -9,6 +9,13 @@ set -x _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 set -g theme_display_date no
 
 alias hx helix
+alias grub-update "sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias psg "ps aux | grep -v grep | grep -i -e VSZ -e"
+alias pacs "pacman -Slq | fzf -m --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+alias pars "paru -Slq | fzf -m --preview 'paru -Si {1}' | xargs -ro paru -S"
+alias pacr "pacman -Qq | fzf -m --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
+alias ls "exa --git --icons"
+alias v nvim
 
 if [ -f ~/quotes/quotes ]
     function quote
