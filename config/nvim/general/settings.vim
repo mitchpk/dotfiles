@@ -1,11 +1,5 @@
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Up> <Nop>
-noremap <Right> <Nop>
-
 " set leader key
-let g:mapleader = "\\"
+let g:mapleader = " "
 
 filetype plugin indent on
 syntax enable
@@ -31,9 +25,11 @@ set laststatus=0
 set scrolloff=10
 set noruler
 set number
+set relativenumber
 set shortmess+=c
 set noswapfile
 set nomodeline
+set mouse=a
 
 " Stop newline continuation of comments
 autocmd BufWinEnter,BufNewFile * setlocal formatoptions-=cro
