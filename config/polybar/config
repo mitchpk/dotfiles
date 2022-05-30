@@ -1,5 +1,5 @@
 [bar/bar]
-bottom = false
+bottom = true
 
 background = #24292f
 foreground = #ffffff
@@ -18,13 +18,13 @@ module-margin = 1
 
 radius = 0.0
 
-font-0 = Fira Mono:size=10:style=Regular;3
-font-1 = Font Awesome 6 Free:style=Regular:size=12;3
-font-2 = Font Awesome 6 Free Solid:style=Solid:size=12;3
-font-3 = Font Awesome 6 Brands:size=12;3
+font-0 = Fira Mono:size=11:style=Regular;1
+font-1 = Font Awesome 6 Free:style=Regular:size=11;2
+font-2 = Font Awesome 6 Free Solid:style=Solid:size=11;2
+font-3 = Font Awesome 6 Brands:size=11;2
 
-modules-left = i3
-modules-right = battery pulseaudio-volume date-and-time keyboard-layout
+modules-left = i3 xwindow
+modules-right = cpu memory disk battery pulseaudio-volume date-and-time keyboard-layout
 
 locale = en_AU.UTF-8
 
@@ -56,7 +56,6 @@ label-urgent-padding = 1
 label-visible = %name%
 label-visible-padding = 1
 
-format-padding =
 scroll-up = i3-desknext
 scroll-down = i3-deskprev
 
@@ -64,22 +63,20 @@ scroll-down = i3-deskprev
 type = internal/xwindow
 label = %title:0:50:...%
 
-format-padding =
-
 [module/cpu]
 type = internal/cpu
-label = %percentage% %
+label =  %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 1
-label = %gb_free%
+label =  %gb_free%
 
 [module/disk]
 type = internal/fs
 mount-0 = /
 interval = 10
-label-mounted = %free%
+label-mounted =  %free%
 
 [module/battery]
 type = internal/battery
@@ -87,9 +84,9 @@ full-at = 99
 battery = BAT0
 adapter = AC0
 
-format-charging = <label-charging>  <animation-charging>
-format-discharging = <label-discharging>  <ramp-capacity>
-format-full = <label-full>  
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full =  <label-full>
 
 label-charging = %percentage%%
 label-discharging = %percentage%%
@@ -112,7 +109,7 @@ type = internal/pulseaudio
 
 use-ui-max = false
 
-format-volume = <label-volume>  <ramp-volume>
+format-volume = <ramp-volume> <label-volume>
 
 label-muted = 
 
@@ -132,7 +129,7 @@ type = internal/date
 date = %d/%m/%y
 date-alt = %A %d %B, %Y
 
-time = %I:%M %p
-time-alt = %I:%M:%S %p
+time = %I:%M %P
+time-alt = %I:%M:%S %P
 
 label = %date% %time%
