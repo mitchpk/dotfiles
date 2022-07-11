@@ -14,7 +14,7 @@ alias psg "ps aux | grep -v grep | grep -i -e VSZ -e"
 alias pacs "pacman -Slq | fzf -m --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias pars "paru -Slq | fzf -m --preview 'paru -Si {1}' | xargs -ro paru -S"
 alias pacr "pacman -Qq | fzf -m --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
-alias ls "exa --git --icons"
+alias ls "exa --git"
 alias v nvim
 
 if [ -f ~/quotes/quotes ]
