@@ -5,14 +5,14 @@
 # Read `man 5 sway` for a complete reference.
 
 output eDP-1 scale 2
-xwayland scale 2
+#xwayland scale 2
 font pango:Fira Mono 10
 default_border pixel 1
 default_floating_border normal
 hide_edge_borders none
 focus_follows_mouse no
 
-seat seat0 xcursor_theme Breeze_Snow 48
+#seat seat0 xcursor_theme Breeze_Snow 48
 
 ### Variables
 #
