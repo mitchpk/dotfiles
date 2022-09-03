@@ -5,6 +5,8 @@ set -x COLORTERM truecolor
 
 set -g theme_display_date no
 
+bind \cd delete-char
+
 alias hx helix
 alias grub-update "sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias psg "ps aux | grep -v grep | grep -i -e VSZ -e"
