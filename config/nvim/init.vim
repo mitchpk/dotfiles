@@ -1,9 +1,0 @@
-source $HOME/.config/nvim/vim-plug/plugins.vim
-source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/theme.vim
-source $HOME/.config/nvim/keys/mappings.vim
-source $HOME/.config/nvim/plug-config/lsp.vim
-source $HOME/.config/nvim/plug-config/vimtex.vim
-luafile $HOME/.config/nvim/lua/plugins/compe.lua
-luafile $HOME/.config/nvim/lua/plugins/autopairs.lua
-luafile $HOME/.config/nvim/lua/plugins/lsp.lua
