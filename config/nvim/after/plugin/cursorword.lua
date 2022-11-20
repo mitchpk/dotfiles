@@ -44,7 +44,7 @@ local function matchadd()
   if
     cursorword == ''
     or #cursorword > 100
-    or #cursorword < 3
+    --or #cursorword < 3
     or string.find(cursorword, '[\192-\255]+') ~= nil
   then
     return
