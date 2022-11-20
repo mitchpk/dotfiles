@@ -12,10 +12,11 @@ vim.opt.smartindent = true
 vim.opt.hlsearch = true
 vim.opt.backup = false
 vim.opt.showcmd = true
+vim.opt.showmode = false
 vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
 vim.opt.expandtab = true
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 5
 vim.opt.shell = 'fish'
 vim.opt.backupskip = { '/tmp/*', '/private/tmp/*' }
 vim.opt.inccommand = 'split'
@@ -28,6 +29,8 @@ vim.opt.wrap = false
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' }
 vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.list = true
+vim.opt.listchars = 'tab:  ,trail:~,extends:>,precedes:<'
 
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
@@ -36,5 +39,3 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     pattern = '*',
     command = "set nopaste"
 })
-
-vim.opt.formatoptions:append { 'r' }

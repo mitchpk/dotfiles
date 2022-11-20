@@ -9,14 +9,11 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'nvim-lualine/lualine.nvim'
-    use 'folke/tokyonight.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
     use 'neovim/nvim-lspconfig'
-    use 'jose-elias-alvarez/null-ls.nvim'
-    use 'glepnir/lspsaga.nvim'
     use 'L3MON4D3/LuaSnip'
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -27,4 +24,6 @@ packer.startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'norcalli/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
+    use 'lukas-reineke/indent-blankline.nvim'
+    use 'sainnhe/gruvbox-material'
 end)
