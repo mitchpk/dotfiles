@@ -11,6 +11,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+    vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set('n', 'gn', vim.lsp.buf.rename, bufopts)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -67,14 +69,14 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     {
         underline = true,
         update_in_insert = false,
-        --virtual_text = { spacing = 4, prefix = "● " },
+        virtual_text = { spacing = 4, prefix = "● " },
         severity_sort = true,
     }
 )
 
 vim.diagnostic.config({
     virtual_text = {
-        --prefix = '● '
+        prefix = '● '
     },
     update_in_insert = true,
     float = {
