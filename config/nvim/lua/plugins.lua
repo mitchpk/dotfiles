@@ -24,6 +24,5 @@ packer.startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'norcalli/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
-    use 'lukas-reineke/indent-blankline.nvim'
     use 'sainnhe/gruvbox-material'
 end)

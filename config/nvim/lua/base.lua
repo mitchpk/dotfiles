@@ -22,6 +22,7 @@ vim.opt.shell = 'fish'
 vim.opt.backupskip = { '/tmp/*', '/private/tmp/*' }
 vim.opt.inccommand = 'split'
 vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 4
@@ -30,8 +31,6 @@ vim.opt.wrap = false
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' }
 vim.opt.wildignore:append { '*/node_modules/*' }
-vim.opt.list = true
-vim.opt.listchars:append 'trail:~'
 
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
@@ -39,4 +38,15 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 vim.api.nvim_create_autocmd("InsertLeave", {
     pattern = '*',
     command = "set nopaste"
+})
+
+local function remove_whitespace()
+    local save = vim.fn.winsaveview()
+    vim.cmd [[keepjumps keeppatterns silent! %s/\s\+$//e]]
+    vim.fn.winrestview(save)
+end
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = '*',
+    callback = remove_whitespace
 })
