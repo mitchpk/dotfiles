@@ -1,6 +1,7 @@
 set -x TERMINAL "alacritty"
 set -x EDITOR "nvim"
 set -x npm_config_prefix "$HOME/.local"
+set -x COLORTERM truecolor
 
 set -g theme_display_date no
 

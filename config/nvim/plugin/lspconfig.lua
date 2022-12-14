@@ -16,10 +16,12 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-nvim_lsp.tsserver.setup {
+nvim_lsp.volar.setup {
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
 
 nvim_lsp.sumneko_lua.setup {
@@ -60,6 +62,11 @@ nvim_lsp.gopls.setup {
 }
 
 nvim_lsp.pyright.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+nvim_lsp.cssls.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
