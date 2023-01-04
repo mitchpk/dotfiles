@@ -10,7 +10,6 @@ packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-lua/plenary.nvim'
-    use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
     use 'neovim/nvim-lspconfig'
