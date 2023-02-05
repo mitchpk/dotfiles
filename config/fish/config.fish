@@ -13,7 +13,7 @@ alias pacs "pacman -Slq | fzf -m --preview 'pacman -Si {1}' | xargs -ro sudo pac
 alias pars "paru -Slq | fzf -m --preview 'paru -Si {1}' | xargs -ro paru -S"
 alias pacr "pacman -Qq | fzf -m --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 alias ls "exa --git"
-alias multiget "aria2c -x 16 -s 16 --min-split-size=1M"
+alias multiget "aria2c -s 128"
 
 if [ -f ~/quotes/quotes ]
     function quote

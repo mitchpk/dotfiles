@@ -18,10 +18,14 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = false
 
+nvim_lsp.tsserver.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
 nvim_lsp.volar.setup {
     on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+    capabilities = capabilities
 }
 
 nvim_lsp.sumneko_lua.setup {
