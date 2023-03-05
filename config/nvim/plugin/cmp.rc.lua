@@ -2,6 +2,7 @@ local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 
 local luasnip = require("luasnip")
+require("luasnip/loaders/from_vscode").lazy_load()
 
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -9,7 +10,7 @@ local has_words_before = function()
 end
 
 vim.cmd [[
-  set completeopt=menuone,noinsert,noselect
+  set completeopt=menu,menuone,noselect
   highlight! default link CmpItemKind CmpItemMenuDefault
 ]]
 
@@ -24,10 +25,7 @@ cmp.setup({
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.close(),
-        ['<CR>'] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = false
-        }),
+        ['<CR>'] = cmp.mapping.confirm(),
 
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
@@ -51,8 +49,10 @@ cmp.setup({
             end
         end, { "i", "s" }),
     }),
+    preselect = cmp.PreselectMode.None,
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
+        { name = 'luasnip' },
         { name = 'path' }
     })
 })
