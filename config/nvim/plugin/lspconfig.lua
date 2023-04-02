@@ -46,7 +46,21 @@ nvim_lsp.lua_ls.setup {
 
 nvim_lsp.rust_analyzer.setup {
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    settings = {
+        ['rust-analyzer'] = {
+            completion = {
+                postfix = {
+                    enable = false,
+                },
+            },
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+            },
+        }
+    }
 }
 
 nvim_lsp.clangd.setup {
