@@ -35,3 +35,9 @@ if [ -f ~/quotes/quotes ]
         #cowsay (random choice (cat ~/quotes/quotes))
     end
 end
+
+function portscan
+    timeout 1 \
+    /bin/bash -c "echo > /dev/tcp/$argv[1]/$argv[2]" 2>/dev/null \
+    && echo "$argv[1]:$argv[2] open"
+end
