@@ -29,4 +29,5 @@ packer.startup(function(use)
     use 'norcalli/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
     use 'sainnhe/gruvbox-material'
+    use 'kaarmu/typst.vim'
 end)
