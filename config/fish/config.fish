@@ -41,3 +41,9 @@ function portscan
     /bin/bash -c "echo > /dev/tcp/$argv[1]/$argv[2]" 2>/dev/null \
     && echo "$argv[1]:$argv[2] open"
 end
+
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        exec Hyprland
+    end
+end
