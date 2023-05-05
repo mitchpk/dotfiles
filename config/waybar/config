@@ -113,7 +113,7 @@
     }
   },
   "tray": {
-    "spacing": 4,
+    "spacing": 8,
     "icon-size": 20
   },
   "custom/pacman": {
