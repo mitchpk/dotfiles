@@ -86,7 +86,7 @@
   },
   "cpu": {
     "interval": 5,
-    "format": "{usage}% ",
+    "format": "{usage}% ",
     "on-click": "$TERMINAL -e btop -p 1"
   },
   "memory": {
@@ -102,14 +102,14 @@
     "tooltip": false
   },
   "clock": {
-    "interval": 60,
-    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    "interval": 1,
+    "tooltip-format": "<big>{:%T %D}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
     "activated": "",
-    "deactivated": "鈴"
+    "deactivated": "󰒲"
     }
   },
   "tray": {
@@ -117,16 +117,15 @@
     "icon-size": 20
   },
   "custom/pacman": {
-    "interval": 350,
-    "format": " {}",
-    "exec": "checkupdates | wc -l",
-    "exex-if": "checkupdates",
+    "interval": 600,
+    "format": "󰏗 {}",
+    "exec": "checkupdates 2>/dev/null | wc -l",
     "on-click": "$TERMINAL -e paru -Syu && pkill -SIGRTMIN+8 waybar",
     "signal": 8
   },
   "custom/weather": {
     "interval": 600,
-    "exec": "curl --no-progress-meter \"wttr.in/Adelaide?format=%c%t\\n\" | sed -e \"s/ //g\"",
+    "exec": "curl --no-progress-meter \"wttr.in/Adelaide?format=%t%c\\n\" | sed -e \"s/°C/°C /g\"",
     "exec-if": "ping wttr.in -c 1",
     "format": "{}",
     "tooltip": false

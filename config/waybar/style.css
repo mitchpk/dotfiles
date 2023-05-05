@@ -1,6 +1,6 @@
 * {
     font-family: "Iosevka Nerd Font";
-    font-weight: 700;
+    font-weight: bold;
     font-size: 16px;
 }
 
@@ -58,3 +58,4 @@ tooltip label { color: #EBDBB2; text-shadow: none; border: none; }
 #memory { color: #689D6A; }
 #custom-weather { color: #458588; }
 #clock { color: #B16286; }
+#tray { padding: 0 8px; }
