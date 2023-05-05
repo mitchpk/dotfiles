@@ -10,12 +10,12 @@ YELLOW="FABD2F"
 GREEN="B8BB26"
 
 swaylock \
+  --clock \
+  --indicator \
   --daemonize \
   --image ~/Sync/Default/background.jpg \
   --ignore-empty-password \
-  --show-failed-attempts \
   --font "Iosevka Nerd Font" \
-  --font-size 30 \
   --indicator-radius 200 \
   --indicator-thickness 10 \
   --inside-color $BG \
@@ -35,4 +35,6 @@ swaylock \
   --text-color $TEXT \
   --text-clear-color $TEXT \
   --text-ver-color $TEXT \
-  --text-wrong-color $RED
+  --text-wrong-color $RED \
+  --grace 5 \
+  --effect-blur 7x5
