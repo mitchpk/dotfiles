@@ -4,7 +4,7 @@
   "layer": "top",
   "position": "top",
   "spacing": 7,
-  "margin": "5 5 0 5",
+  "margin": "10 10 0 10",
   "height": 33,
   "modules-left": [ "idle_inhibitor", "backlight", "custom/pacman", "network", "bluetooth", "pulseaudio", "mpd" ],
   "modules-center": [ "wlr/workspaces" ],
