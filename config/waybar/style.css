@@ -27,7 +27,7 @@ tooltip label { color: #EBDBB2; text-shadow: none; border: none; }
     color: #3C3836;
     background: #FABD2F;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 #idle_inhibitor { color: #FBF1C7; padding-right: 15px}
 #backlight { color: #EBDBB2; }
@@ -48,9 +48,10 @@ tooltip label { color: #EBDBB2; text-shadow: none; border: none; }
 }
 #workspaces button.active {
     color: #282828;
-    background: #427b58;
+    background: #458588;
+    border-radius: 4px;
 }
-#workspaces button.active:hover { background: #689d6a; }
+#workspaces button.active:hover { background: #5595A8; }
 #battery { color: #D65D0E; }
 #temperature.critical { color: #CC241D; }
 #temperature { color: #D79921; }

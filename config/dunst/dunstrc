@@ -1,61 +1,58 @@
 [global]
-    monitor = 0
     follow = mouse
-    width = 320
-    height = 320
-    origin = bottom-right
-    offset = 15x47
-    scale = 0
-    notification_limit = 0
-    progress_bar = false
     indicate_hidden = yes
-    transparency = 0
+
+    offset = 10x10
+
+    notification_height = 0
+
     separator_height = 2
-    padding = 10
-    horizontal_padding = 10
+
+    padding = 8
+    horizontal_padding = 8
     text_icon_padding = 0
-    frame_width = 1
-    frame_color = "#333333"
+    frame_width = 2
+
+    frame_color = "#458588"
     separator_color = frame
+
     sort = yes
     idle_threshold = 120
-    font = Noto Sans 11
+    font = monospace 10
     line_height = 0
     markup = full
-    format = "<span foreground='#f3f4f5'><b>%s %p</b></span>\n%b"
     alignment = left
     vertical_alignment = center
     show_age_threshold = 60
-    ellipsize = middle
-    ignore_newline = no
+    word_wrap = yes
     stack_duplicates = true
     hide_duplicate_count = false
+
     show_indicators = yes
-    icon_position = left
-    max_icon_size = 32
-    icon_path = /usr/share/icons/Papirus-Dark/48x48/apps:/usr/share/icons/Papirus-Dark/48x48/categories:/usr/share/icons/Papirus-Dark/48x48/devices:/usr/share/icons/Papirus-Dark/48x48/emblems:/usr/share/icons/Papirus-Dark/48x48/mimetypes:/usr/share/icons/Papirus-Dark/48x48/places:/usr/share/icons/Papirus-Dark/48x48/status
-    sticky_history = yes
-    history_length = 20
-    always_run_script = true
-    corner_radius = 0
-    ignore_dbusclose = false
-    force_xinerama = false
-    mouse_left_click = close_current
-    mouse_middle_click = do_action, close_current
-    mouse_right_click = close_all
+
+    min_icon_size = 0
+    max_icon_size = 64
+
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/:/usr/share/icons/Papirus-Dark/16x16/actions/:/usr/share/icons/Papirus-Dark/16x16/animations/:/usr/share/icons/Papirus-Dark/16x16/apps/:/usr/share/icons/Papirus-Dark/16x16/categories/:/usr/share/icons/Papirus-Dark/16x16/emblems/:/usr/share/icons/Papirus-Dark/16x16/emotes/:/usr/share/icons/Papirus-Dark/16x16/devices/mimetypes:/usr/share/icons/Papirus-Dark/16x16/panel/:/usr/share/icons/Papirus-Dark/16x16/places/
+
+    dmenu = /usr/bin/wofi -d -p dunst:
+    browser = /usr/bin/firefox --new-tab
+
+    title = Dunst
+    class = Dunst
+
+    corner_radius = 8
+    timeout = 5
 
 [urgency_low]
-    background = "#333333"
-    foreground = "#a8a8a8"
-    timeout = 10
+    background = "#1D2021"
+    foreground = "#5F332F"
 
 [urgency_normal]
-    background = "#333333"
-    foreground = "#a8a8a8"
-    timeout = 10
+    background = "#1D2021"
+    foreground = "#E8E3E3"
 
 [urgency_critical]
-    background = "#d64e4e"
-    foreground = "#f0e0e0"
-    frame_color = "#d64e4e"
-    timeout = 0
+    background = "#1D2021"
+    foreground = "#AD685A"
+    frame_color = "#DD8F6E"
