@@ -1,11 +1,9 @@
 // vim:ft=rasi
 @import "vars"
 
-// Rofi defaults
-
 configuration {
   font:                             "Iosevka Nerd Font 14";
-  show-icons:                       false;
+  dmenu-display-format:             "{name}";
   disable-history:                  false;
   hide-scrollbar:                   true;
 }
@@ -16,33 +14,38 @@ window {
   border:                           2px;
   border-color:                     @border;
   border-radius:                    @bordrad;
-}
-
-prompt {
-  background-color:                 @transparent;
-  text-color:                       @accent;
-  font:                             "Iosevka NF 25";
-}
-
-entry {
-  background-color:                 @transparent;
-  text-color:                       @fg;
-  placeholder-color:                @fg-dimmed;
-  expand:                           true;
-  horizontal-align:                 0;
-  blink:                            false;
+  width:                            500;
+  location:                         south west;
+  x-offset:                         90;
+  y-offset:                         -90;
 }
 
 inputbar {
   children:                         [ prompt, entry ];
   background-color:                 @bg-light;
   text-color:                       @fg;
-  padding:                          15 20 6 20;
+  padding:                          10 20 5;
+}
+
+prompt {
+  padding:                          0 20 0 0;
+  background-color:                 inherit;
+  text-color:                       @accent;
+  font:                             "Iosevka Nerd Font 15";
+}
+
+entry {
+  background-color:                 inherit;
+  text-color:                       @fg;
+  placeholder-color:                @fg-dimmed;
+  expand:                           true;
+  placeholder:                      " Clipboard";
+  blink:                            false;
 }
 
 listview {
   background-color:                 @bg;
-  padding:                          3;
+  padding:                          5;
   columns:                          1;
   lines:                            5;
   cycle:                            false;
@@ -51,12 +54,10 @@ listview {
   border-radius:                    @bordrad;
   border-color:                     @bg-light;
   border:                           1px;
-  margin:                           -2 -1 -1 -1;
 }
 
 mainbox {
-  background-color:                 @border;
-  border-color:                     @border;
+  background-color:                 @bg-light;
   children:                         [ inputbar, listview ];
 }
 
@@ -64,18 +65,22 @@ element {
   background-color:                 @transparent;
   orientation:                      vertical;
   border-radius:                    @bordrad;
-  padding:                          10 0;
+  padding:                          8 0 8 5;
 }
 
 element-text {
-  text-color:                       @fg;
+  text-color:                       @fg-dimmed;
   background-color:                 @transparent;
   expand:                           true;
-  horizontal-align:                 0.5;
+  horizontal-align:                 0;
   vertical-align:                   0.5;
 }
 
 element selected {
   background-color:                 @bg-element-selected;
   border-radius:                    @bordrad;
+}
+
+element-text selected {
+  text-color:                       @fg;
 }

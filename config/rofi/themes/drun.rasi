@@ -1,27 +1,34 @@
 // vim:ft=rasi
 @import "vars"
 
-// Rofi defaults
-
 configuration {
   font:                             "Iosevka Nerd Font 14";
   show-icons:                       false;
+  icon-theme:                       "Papirus";
+  display-drun:                     "";
+  drun-display-format:              "{name}";
   disable-history:                  false;
   hide-scrollbar:                   true;
 }
 
 window {
+  transparency:                     "real";
   background-color:                 @bg;
   text-color:                       @fg;
-  border:                           2px;
+  border:                           2;
   border-color:                     @border;
   border-radius:                    @bordrad;
+  width:                            300;
+  location:                         south east;
+  x-offset:                         -90;
+  y-offset:                         -90;
 }
 
 prompt {
+  padding:                          -5 20 0 0;
   background-color:                 @transparent;
   text-color:                       @accent;
-  font:                             "Iosevka NF 25";
+  font:                             "Iosevka Nerd Font 20";
 }
 
 entry {
@@ -30,6 +37,7 @@ entry {
   placeholder-color:                @fg-dimmed;
   expand:                           true;
   horizontal-align:                 0;
+  placeholder:                      " Launch";
   blink:                            false;
 }
 
@@ -50,13 +58,12 @@ listview {
   layout:                           vertical;
   border-radius:                    @bordrad;
   border-color:                     @bg-light;
-  border:                           1px;
-  margin:                           -2 -1 -1 -1;
+  border:                           1;
+
 }
 
 mainbox {
-  background-color:                 @border;
-  border-color:                     @border;
+  background-color:                 @bg-light;
   children:                         [ inputbar, listview ];
 }
 
@@ -64,18 +71,22 @@ element {
   background-color:                 @transparent;
   orientation:                      vertical;
   border-radius:                    @bordrad;
-  padding:                          10 0;
-}
-
-element-text {
-  text-color:                       @fg;
-  background-color:                 @transparent;
-  expand:                           true;
-  horizontal-align:                 0.5;
-  vertical-align:                   0.5;
+  padding:                          8 0;
 }
 
 element selected {
   background-color:                 @bg-element-selected;
   border-radius:                    @bordrad;
+}
+
+element-text {
+  text-color:                       @fg-dimmed;
+  background-color:                 @transparent;
+  expand:                           false;
+  horizontal-align:                 0.5;
+  vertical-align:                   0.5;
+}
+
+element-text selected {
+  text-color:                       @fg;
 }
