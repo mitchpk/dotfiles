@@ -6,6 +6,7 @@ configuration {
   show-icons:                       false;
   icon-theme:                       "Papirus";
   display-drun:                     "";
+  drun-match-fields:                "name,generic,categories";
   drun-display-format:              "{name}";
   disable-history:                  false;
   hide-scrollbar:                   true;
