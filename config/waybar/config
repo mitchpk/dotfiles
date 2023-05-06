@@ -104,7 +104,7 @@
   },
   "clock": {
     "interval": 1,
-    "tooltip-format": "<big>{:%T %D}</big>\n<tt><small>{calendar}</small></tt>"
+    "tooltip-format": "<big>{:%X %x}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -126,7 +126,7 @@
   },
   "custom/weather": {
     "interval": 600,
-    "exec": "curl --no-progress-meter \"wttr.in/Adelaide?format=%t%c\\n\" | sed -e \"s/°C/°C /g\"",
+    "exec": "curl --no-progress-meter 'wttr.in/Adelaide?format=%t%20%c' | sed 's/ *$//'",
     "exec-if": "ping wttr.in -c 1",
     "format": "{}",
     "tooltip": false
