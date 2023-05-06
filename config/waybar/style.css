@@ -45,11 +45,19 @@ tooltip label { color: #EBDBB2; text-shadow: none; border: none; }
     color: #928374;
     margin: 0;
     padding: 0 5px;
+    border: none;
+    border-radius: 4px;
+}
+#workspaces button:hover {
+    text-shadow: none;
 }
 #workspaces button.active {
     color: #282828;
     background: #458588;
-    border-radius: 4px;
+}
+#workspaces button.urgent {
+    color: #282828;
+    background: #D79921;
 }
 #workspaces button.active:hover { background: #5595A8; }
 #battery { color: #D65D0E; }

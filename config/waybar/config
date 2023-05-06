@@ -12,6 +12,7 @@
   "wlr/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
+    "sort-by-number": true
   },
   "bluetooth": {
     "format": "󰂲",
