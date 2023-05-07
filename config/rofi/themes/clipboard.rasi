@@ -24,14 +24,13 @@ inputbar {
   children:                         [ prompt, entry ];
   background-color:                 @bg-light;
   text-color:                       @fg;
-  padding:                          10 20 5;
 }
 
 prompt {
-  padding:                          0 20 0 0;
+  padding:                          8 20 4 15;
   background-color:                 inherit;
   text-color:                       @accent;
-  font:                             "Iosevka Nerd Font 15";
+  font:                             "Iosevka NF 20";
 }
 
 entry {
@@ -41,6 +40,7 @@ entry {
   expand:                           true;
   placeholder:                      " Clipboard";
   blink:                            false;
+  padding:                          12 0 0 0;
 }
 
 listview {

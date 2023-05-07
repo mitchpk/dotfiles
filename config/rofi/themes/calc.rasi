@@ -3,7 +3,7 @@
 
 configuration {
   font:                             "Iosevka Nerd Font 14";
-  display-calc:                     "";
+  display-calc:                     "󰃬";
   hide-scrollbar:                   true;
   disable-history:                  true;
 }
@@ -37,7 +37,7 @@ inputbar {
 
 prompt {
   enabled:                          true;
-  padding:                          8 15 0 15;
+  padding:                          8 15 4 15;
   background-color:                 inherit;
   text-color:                       @accent;
   font:                             "Iosevka NF 20";
