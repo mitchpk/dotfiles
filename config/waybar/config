@@ -126,7 +126,7 @@
   },
   "custom/weather": {
     "interval": 600,
-    "exec": "curl --no-progress-meter 'wttr.in/Adelaide?format=%t%20%c' | sed 's/ *$//'",
+    "exec": "~/.config/scripts/weather.sh",
     "exec-if": "ping wttr.in -c 1",
     "format": "{}",
     "tooltip": false
