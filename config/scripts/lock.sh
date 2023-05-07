@@ -36,5 +36,4 @@ swaylock \
   --text-clear-color $TEXT \
   --text-ver-color $TEXT \
   --text-wrong-color $RED \
-  --grace 5 \
   --effect-blur 7x5
