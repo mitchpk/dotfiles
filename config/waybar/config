@@ -87,12 +87,12 @@
   },
   "cpu": {
     "interval": 5,
-    "format": "{usage}% ",
+    "format": "{usage}% 󰍛",
     "on-click": "$TERMINAL -e btop -p 1"
   },
   "memory": {
     "interval": 5,
-    "format": "{}% ",
+    "format": "{}% 󰍜",
     "on-click": "$TERMINAL -e btop -p 2"
   },
   "temperature": {
