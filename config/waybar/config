@@ -120,7 +120,7 @@
   "custom/pacman": {
     "interval": 600,
     "format": "󰏗 {}",
-    "exec": "checkupdates 2>/dev/null | wc -l",
+    "exec": "~/.config/scripts/updates.sh",
     "on-click": "$TERMINAL -e paru -Syu && pkill -SIGRTMIN+8 waybar",
     "signal": 8
   },
