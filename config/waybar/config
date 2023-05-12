@@ -1,134 +1,121 @@
 // vim:ft=json
 {
-  "id": "bar-0",
-  "layer": "top",
-  "position": "top",
-  "spacing": 7,
-  "margin": "10 10 0 10",
-  "height": 33,
-  "modules-left": [ "idle_inhibitor", "backlight", "custom/pacman", "network", "pulseaudio", "mpd" ],
-  "modules-center": [ "wlr/workspaces" ],
-  "modules-right": [ "battery", "battery#bat2", "temperature", "cpu", "memory", "custom/weather", "clock", "tray" ],
-  "wlr/workspaces": {
-    "format": "{icon}",
-    "on-click": "activate",
-    "sort-by-number": true
-  },
-  "bluetooth": {
-    "format": "󰂲",
-    "format-connected": "",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "$TERMINAL -e bluetoothctl"
-  },
-  "network": {
-    "format-wifi": "{icon} ",
-    "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤢" , "󰤨" ],
-    "format-ethernet": "{ipaddr}/{cidr}",
-    "format-disconnected": "󰤮 ",
-    "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
-    "tooltip-format-ethernet": "",
-    "max-length": 50,
-    "on-click": "$TERMINAL"
-  },
-  "battery": {
-    "bat": "BAT0",
-    "interval": 3,
-    "format": "{capacity}% {icon} ",
-    "format-icons": ["", "", "", "", ""],
-    "format-charging": "󱐋 {capacity}% {icon} ",
-    "tooltip-format": "{power} W, {time}"
-  },
-  "battery#bat2": {
-   "bat": "BAT1",
-    "interval": 3,
-    "format": "{capacity}% {icon} ",
-    "format-icons": ["", "", "", "", ""],
-    "format-charging": "󱐋 {capacity}% {icon} ",
-    "tooltip-format": "{power} W, {time}"
-  },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon} {percent}%",
-    "format-icons": [ "󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠" ]
-  },
-  "mpd": {
-    "format": "{stateIcon} {title} - {artist}",
-    "format-disconnected": "󰎊 ",
-    "format-stopped": " 栗",
-    "max-length": 60,
-    "tooltip-format": "{elapsedTime:%M:%S}/{totalTime:%M:%S}, Vol: {volume} %, Queue: {songPosition}/{queueLength}, Opts: {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
-    "state-icons": {
-      "paused": "契",
-      "playing": ""
+    "id": "bar-0",
+    "layer": "top",
+    "position": "top",
+    "spacing": 7,
+    "margin": "10 10 0 10",
+    "height": 33,
+    "modules-left": [ "idle_inhibitor", "backlight", "custom/pacman", "network", "pulseaudio", "mpris" ],
+    "modules-center": [ "wlr/workspaces" ],
+    "modules-right": [ "battery", "battery#bat2", "temperature", "cpu", "memory", "custom/weather", "clock", "tray" ],
+    "wlr/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "sort-by-number": true
     },
-    "consume-icons": {
-      "on": ""
+    "bluetooth": {
+        "format": "󰂲",
+        "format-connected": "",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "$TERMINAL -e bluetoothctl"
     },
-    "random-icons": {
-      "on": "  "
+    "network": {
+        "format-wifi": "{icon} ",
+        "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤢" , "󰤨" ],
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "format-disconnected": "󰤮 ",
+        "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
+        "tooltip-format-ethernet": "",
+        "max-length": 50,
+        "on-click": "$TERMINAL"
     },
-    "repeat-icons": {
-      "on": " "
+    "battery": {
+        "bat": "BAT0",
+        "interval": 3,
+        "format": "{capacity}% {icon} ",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "󱐋 {capacity}% {icon} ",
+        "tooltip-format": "{power} W, {time}"
     },
-    "single-icons": {
-      "on": "1 "
+    "battery#bat2": {
+        "bat": "BAT1",
+        "interval": 3,
+        "format": "{capacity}% {icon} ",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "󱐋 {capacity}% {icon} ",
+        "tooltip-format": "{power} W, {time}"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": [ "󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠" ]
+    },
+    "mpris": {
+        "format": "{status_icon} {title}",
+        "max-length": 60,
+        "status-icons": {
+            "playing": "⏸",
+            "paused": "▶",
+            "stopped": "⏹"
+        },
+        "ignored-players": ["firefox"]
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "format-muted": "󰝟 ",
+        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol"
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "{usage}% 󰍛",
+        "on-click": "$TERMINAL -e btop -p 1"
+    },
+    "memory": {
+        "interval": 5,
+        "format": "{}% 󰍜",
+        "on-click": "$TERMINAL -e btop -p 2"
+    },
+    "temperature": {
+        "interval": 5,
+        "thermal-zone": 2,
+        "format": "{temperatureC}°C ",
+        "on-click": "$TERMINAL -e btop -p 3",
+        "tooltip": false
+    },
+    "clock": {
+        "interval": 1,
+        "tooltip-format": "<big>{:%X %x}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": "󰒲"
+        }
+    },
+    "tray": {
+        "spacing": 8,
+        "icon-size": 20
+    },
+    "custom/pacman": {
+        "interval": 600,
+        "format": "󰏗 {}",
+        "exec": "~/.config/scripts/updates.sh",
+        "on-click": "$TERMINAL -e paru -Syu && pkill -SIGRTMIN+8 waybar",
+        "signal": 8
+    },
+    "custom/weather": {
+        "interval": 600,
+        "exec": "~/.config/scripts/weather.sh",
+        "exec-if": "ping wttr.in -c 1",
+        "format": "{}",
+        "tooltip": false
     }
-  },
-  "pulseaudio": {
-    "scroll-step": 5,
-    "format": "{icon} {volume}%",
-    "format-icons": ["󰕿", "󰖀", "󰕾"],
-    "format-muted": "󰝟 ",
-    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
-    "on-click-right": "pavucontrol"
-  },
-  "cpu": {
-    "interval": 5,
-    "format": "{usage}% 󰍛",
-    "on-click": "$TERMINAL -e btop -p 1"
-  },
-  "memory": {
-    "interval": 5,
-    "format": "{}% 󰍜",
-    "on-click": "$TERMINAL -e btop -p 2"
-  },
-  "temperature": {
-    "interval": 5,
-    "thermal-zone": 2,
-    "format": "{temperatureC}°C ",
-    "on-click": "$TERMINAL -e btop -p 3",
-    "tooltip": false
-  },
-  "clock": {
-    "interval": 1,
-    "tooltip-format": "<big>{:%X %x}</big>\n<tt><small>{calendar}</small></tt>"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-    "activated": "",
-    "deactivated": "󰒲"
-    }
-  },
-  "tray": {
-    "spacing": 8,
-    "icon-size": 20
-  },
-  "custom/pacman": {
-    "interval": 600,
-    "format": "󰏗 {}",
-    "exec": "~/.config/scripts/updates.sh",
-    "on-click": "$TERMINAL -e paru -Syu && pkill -SIGRTMIN+8 waybar",
-    "signal": 8
-  },
-  "custom/weather": {
-    "interval": 600,
-    "exec": "~/.config/scripts/weather.sh",
-    "exec-if": "ping wttr.in -c 1",
-    "format": "{}",
-    "tooltip": false
-  }
 }
