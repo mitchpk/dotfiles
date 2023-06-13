@@ -5,6 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 output eDP-1 scale 2
+output DP-1 mode 2560x1440@165.080Hz
 #xwayland scale 2
 font pango:Fira Mono 10
 default_border pixel 1
@@ -39,7 +40,7 @@ exec dex -a
 ### Output configuration
 #
 set $wallpapers_path $HOME/wallpapers
-output * bg `find $wallpapers_path -type f | shuf -n 1` fill
+#output * bg `find $wallpapers_path -type f | shuf -n 1` fill
 #
 # Example configuration:
 #
@@ -84,6 +85,10 @@ input "1267:12600:MSFT0001:00_04F3:3138_Touchpad" {
     natural_scroll enabled
     dwt disabled
     click_method clickfinger
+}
+
+input "1133:16500:Logitech_G305" {
+    accel_profile "flat"
 }
 
 

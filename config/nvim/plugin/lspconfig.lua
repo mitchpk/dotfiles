@@ -13,7 +13,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
-    vim.keymap.set('n', 'gn', vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', 'gR', vim.lsp.buf.rename, bufopts)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -53,11 +53,6 @@ nvim_lsp.rust_analyzer.setup {
             completion = {
                 postfix = {
                     enable = false,
-                },
-            },
-            imports = {
-                granularity = {
-                    group = "module",
                 },
             },
         }
