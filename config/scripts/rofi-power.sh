@@ -36,7 +36,7 @@ case $action in
     exit 0
     ;;
   $logout)
-  [[ $(confirm_exit &)$ == "Y" ]] && hyprctl dispatch exit || \
+    [[ $(confirm_exit &)$ == "Y" ]] && hyprctl dispatch exit || \
     exit 0
     ;;
 esac
