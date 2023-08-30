@@ -36,9 +36,7 @@ export const PopupContent = () => Box({
                 Box({
                     className: 'notification-list-box',
                     children: [
-                        Wallpaper({
-                            children: [notifications.List()],
-                        }),
+                        notifications.List(),
                     ],
                 }),
             ],

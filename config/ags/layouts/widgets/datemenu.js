@@ -7,13 +7,13 @@ export const PopupContent = props => Box({
     className: 'datemenu',
     children: [
         Clock({ format: '%H:%M:%S' }),
-        Box({
+        /*Box({
             className: 'uptime-box',
             halign: 'center',
             children: [
                 Uptime(),
             ],
-        }),
+        }),*/
         Box({
             className: 'calendar',
             children: [

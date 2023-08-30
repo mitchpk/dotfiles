@@ -350,9 +350,9 @@ const BatteryIndicator = () => Box({
                 direction: 'right',
                 indicator: battery.Indicator(),
                 child: battery.LevelLabel(),
-                connections: [[Battery, revealer => {
+                /*connections: [[Battery, revealer => {
                     revealer.reveal_child = Battery.percent < 100;
-                }]],
+                }]],*/
             })
         ];
 
