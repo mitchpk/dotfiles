@@ -13,9 +13,9 @@ swaylock \
   --clock \
   --indicator \
   --daemonize \
-  --image ~/Sync/Default/background.jpg \
+  --screenshots \
   --ignore-empty-password \
-  --font "Iosevka Nerd Font" \
+  --font "IosevkaTerm Nerd Font" \
   --indicator-radius 200 \
   --indicator-thickness 10 \
   --inside-color $BG \
@@ -36,4 +36,5 @@ swaylock \
   --text-clear-color $TEXT \
   --text-ver-color $TEXT \
   --text-wrong-color $RED \
-  --effect-blur 7x5
+  --effect-blur 10x10 \
+  --effect-vignette 0.5:0.5

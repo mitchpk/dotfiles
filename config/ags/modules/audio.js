@@ -90,7 +90,7 @@ export const MicrophoneMuteIndicator = ({
 
 export const MicrophoneMuteToggle = props => Button({
     ...props,
-    onClicked: 'pactl set-source-mute @DEFAULT_SOURCE@ toggle',
+    onClicked: 'wpctl set-mute @DEFAULT_SOURCE@ toggle',
     connections: [[Audio, button => {
         if (!Audio.microphone)
             return;

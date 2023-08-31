@@ -136,7 +136,7 @@ const VolumeBox = () => Box({
             children: [
                 Button({
                     child: audio.SpeakerTypeIndicator(),
-                    onClicked: 'pactl set-sink-mute @DEFAULT_SINK@ toggle',
+                    onClicked: 'wpctl set-mute @DEFAULT_SINK@ toggle',
                 }),
                 audio.SpeakerSlider({ hexpand: true }),
                 audio.SpeakerPercentLabel(),
