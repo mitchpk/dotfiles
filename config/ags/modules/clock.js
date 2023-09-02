@@ -3,7 +3,7 @@ const { execAsync } = ags.Utils;
 const { DateTime } = imports.gi.GLib;
 
 export const Clock = ({
-    format = '%H:%M %A %e %B',
+    format = '%H:%M %A %d %B',
     interval = 1000,
     ...props
 } = {}) => Label({

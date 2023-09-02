@@ -76,7 +76,10 @@ export const Verification = () => Box({
                 }),
                 Button({
                     child: Label('Yes'),
-                    onClicked: () => exec(System.instance._action.cmd),
+                    onClicked: () => {
+                        App.toggleWindow('verification');
+                        setTimeout(() => exec(System.instance._action.cmd), 1000);
+                    },
                 }),
             ],
         }),

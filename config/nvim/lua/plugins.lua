@@ -28,6 +28,7 @@ packer.startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'norcalli/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
+    use 'numToStr/Comment.nvim'
     use 'sainnhe/gruvbox-material'
     use 'kaarmu/typst.vim'
 end)
