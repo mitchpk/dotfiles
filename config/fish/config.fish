@@ -14,7 +14,7 @@ alias pacs "pacman -Slq | fzf -m --preview 'pacman -Si {1}' | xargs -ro sudo pac
 alias pacr "pacman -Qq | fzf -m --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 alias pacc "pacman -Qtdq | xargs -ro sudo pacman -Rns"
 alias ls "exa --git"
-alias multiget "aria2c -s 128"
+alias multiget "aria2c -s16 -x16"
 
 if [ -f ~/quotes/quotes ]
     function quote
@@ -44,6 +44,6 @@ end
 
 if status is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        exec Hyprland
+        exec sway
     end
 end
