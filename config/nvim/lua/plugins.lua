@@ -21,14 +21,52 @@ packer.startup(function(use)
     use 'onsails/lspkind.nvim'
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+        run = function()
+            require('nvim-treesitter.install').update({
+                with_sync = true
+            })
+        end
     }
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
-    use 'windwp/nvim-autopairs'
-    use 'norcalli/nvim-colorizer.lua'
-    use 'lewis6991/gitsigns.nvim'
-    use 'numToStr/Comment.nvim'
-    use 'sainnhe/gruvbox-material'
-    use 'kaarmu/typst.vim'
+    use {
+        'windwp/nvim-autopairs',
+        config = function()
+            require("nvim-autopairs").setup({
+                disable_filetype = { "TelescopePrompt", "vim" },
+                enable_check_bracket_line = false,
+            })
+        end
+    }
+    use {
+        'norcalli/nvim-colorizer.lua',
+        config = function()
+            require("colorizer").setup({
+                '*';
+            })
+        end
+    }
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require("gitsigns").setup()
+        end
+    }
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require("Comment").setup()
+        end
+    }
+    use {
+        'sainnhe/gruvbox-material',
+        config = function()
+            vim.cmd [[
+                let g:gruvbox_material_background = 'hard'
+                let g:gruvbox_material_transparent_background = 1
+                let g:gruvbox_material_better_performance = 1
+                colorscheme gruvbox-material
+            ]]
+        end
+    }
 end)
