@@ -62,7 +62,9 @@ cmp.setup({
             end
         end, { "i", "s" }),
     }),
-    preselect = cmp.PreselectMode.None,
+    completion = {
+        autocomplete = false
+    },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
