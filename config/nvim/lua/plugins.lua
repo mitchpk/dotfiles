@@ -70,4 +70,10 @@ packer.startup(function(use)
             ]]
         end
     }
+    use {
+        'vladdoster/remember.nvim',
+        config = function()
+            require("remember")
+        end
+    }
 end)
