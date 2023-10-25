@@ -65,7 +65,7 @@ packer.startup(function(use)
                 let g:gruvbox_material_background = 'hard'
                 let g:gruvbox_material_transparent_background = 1
                 let g:gruvbox_material_better_performance = 1
-                let g:gruvbox_material_sign_column_background = 'grey'
+                let g:gruvbox_material_foreground = 'original'
                 colorscheme gruvbox-material
             ]]
         end
