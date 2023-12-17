@@ -47,3 +47,6 @@ if status is-login
         exec sway
     end
 end
+
+zoxide init fish | source
+starship init fish | source
