@@ -59,14 +59,11 @@ packer.startup(function(use)
         end
     }
     use {
-        'sainnhe/gruvbox-material',
+        "mcchrish/zenbones.nvim",
+        requires = "rktjmp/lush.nvim",
         config = function()
             vim.cmd [[
-                let g:gruvbox_material_background = 'hard'
-                let g:gruvbox_material_transparent_background = 1
-                let g:gruvbox_material_better_performance = 1
-                let g:gruvbox_material_foreground = 'original'
-                colorscheme gruvbox-material
+                colorscheme zenbones
             ]]
         end
     }
