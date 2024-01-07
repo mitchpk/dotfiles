@@ -1,9 +1,11 @@
 [colors.primary]
 foreground = '#B4BDC3'
 background = '#1C1917'
+
 [colors.cursor]
 cursor =     '#C4CACF'
 text =       '#1C1917'
+
 [colors.normal]
 black =      '#1C1917'
 red =        '#DE6E7C'
@@ -13,8 +15,9 @@ blue =       '#6099C0'
 magenta =    '#B279A7'
 cyan =       '#66A5AD'
 white =      '#B4BDC3'
+
 [colors.bright]
-black =      '#403833'
+black =      '#6E6763'
 red =        '#E8838F'
 green =      '#8BAE68'
 yellow =     '#D68C67'
