@@ -18,7 +18,6 @@ packer.startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
     use 'nvim-tree/nvim-web-devicons'
-    use 'onsails/lspkind.nvim'
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -59,18 +58,21 @@ packer.startup(function(use)
         end
     }
     use {
-        "mcchrish/zenbones.nvim",
-        requires = "rktjmp/lush.nvim",
+        'ramojus/mellifluous.nvim',
         config = function()
-            vim.cmd [[
-                colorscheme zenbones
-            ]]
+            vim.cmd('colorscheme mellifluous')
         end
     }
     use {
         'vladdoster/remember.nvim',
         config = function()
             require("remember")
+        end
+    }
+    use {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require("ibl").setup()
         end
     }
 end)

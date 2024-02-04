@@ -1,5 +1,8 @@
 local keymap = vim.keymap
 
+vim.g.mapleader = ','
+keymap.set('n', ',,', ',')
+
 keymap.set('n', 'x', '"_x')
 
 keymap.set('n', '+', '<C-a>')

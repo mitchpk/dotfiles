@@ -1,5 +1,5 @@
 import = [
-    "~/.config/alacritty/zenbones_dark.toml"
+    "~/.config/alacritty/theme.toml"
 ]
 
 [font]

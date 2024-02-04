@@ -17,7 +17,6 @@ vim.opt.cmdheight = 1
 vim.opt.expandtab = true
 vim.opt.scrolloff = 5
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = 'number'
 vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 50
 vim.opt.guicursor = ''

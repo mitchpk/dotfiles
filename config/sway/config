@@ -6,6 +6,7 @@
 
 output eDP-1 scale 2
 output DP-1 mode 2560x1440@165.080Hz
+output * adaptive_sync on
 #xwayland scale 2
 font pango:Fira Mono 10
 default_border pixel 1
@@ -35,7 +36,7 @@ set $menu rofi -show drun | xargs swaymsg exec --
 exec xrdb ~/.Xresources
 exec waybar
 exec gammashift
-exec dex -a
+#exec dex -a
 
 ### Output configuration
 #
