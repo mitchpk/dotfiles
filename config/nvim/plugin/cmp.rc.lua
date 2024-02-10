@@ -5,6 +5,7 @@ local luasnip = require("luasnip")
 require("luasnip/loaders/from_vscode").lazy_load()
 
 vim.opt.shortmess = vim.opt.shortmess + "c"
+vim.opt.pumheight = 10
 
 cmp.setup({
     snippet = {
