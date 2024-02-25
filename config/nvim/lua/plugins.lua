@@ -61,8 +61,8 @@ packer.startup(function(use)
         'ramojus/mellifluous.nvim',
         config = function()
             require("mellifluous").setup({
-                transparent_background = {
-                    enabled = true
+                flat_background = {
+                    line_numbers = true
                 }
             })
             vim.cmd('colorscheme mellifluous')
