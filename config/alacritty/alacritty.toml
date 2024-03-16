@@ -11,3 +11,6 @@ family = "JetBrainsMono Nerd Font"
 [window.padding]
 x = 4
 y = 4
+
+[mouse]
+hide_when_typing = true
