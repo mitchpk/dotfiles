@@ -46,26 +46,21 @@ packer.startup(function(use)
         end
     }
     use {
-        'lewis6991/gitsigns.nvim',
-        config = function()
-            require("gitsigns").setup()
-        end
-    }
-    use {
         'numToStr/Comment.nvim',
         config = function()
             require("Comment").setup()
         end
     }
     use {
-        'ramojus/mellifluous.nvim',
-        config = function()
-            require("mellifluous").setup({
-                flat_background = {
-                    line_numbers = true
+        'ellisonleao/gruvbox.nvim',
+        config = function ()
+            require("gruvbox").setup({
+                contrast = "hard",
+                italic = {
+                    strings = false
                 }
             })
-            vim.cmd('colorscheme mellifluous')
+            vim.cmd('colorscheme gruvbox')
         end
     }
     use {
