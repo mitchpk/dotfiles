@@ -52,15 +52,14 @@ packer.startup(function(use)
         end
     }
     use {
-        'ellisonleao/gruvbox.nvim',
-        config = function ()
-            require("gruvbox").setup({
-                contrast = "hard",
-                italic = {
-                    strings = false
-                }
-            })
-            vim.cmd('colorscheme gruvbox')
+        'sainnhe/gruvbox-material',
+        config = function()
+            vim.cmd [[
+                let g:gruvbox_material_foreground = 'original'
+                let g:gruvbox_material_background = 'hard'
+                let g:gruvbox_material_better_performance = 1
+                colorscheme gruvbox-material
+            ]]
         end
     }
     use {
