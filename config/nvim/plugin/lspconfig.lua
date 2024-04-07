@@ -55,6 +55,12 @@ nvim_lsp.rust_analyzer.setup {
                     enable = false,
                 },
             },
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "crate",
+            },
         }
     }
 }
