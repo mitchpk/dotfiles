@@ -3,7 +3,19 @@ local keymap = vim.keymap
 vim.g.mapleader = ','
 keymap.set('n', ',,', ',')
 
+keymap.set('n', '<C-d>', '<C-d>zz')
+keymap.set('n', '<C-u>', '<C-u>zz')
+keymap.set('n', 'n', 'nzz')
+keymap.set('n', 'N', 'Nzz')
+
 keymap.set('n', 'x', '"_x')
+keymap.set('x', '<leader>p', '"_dP')
+keymap.set('n', '<leader>Y', '"+Y')
+keymap.set({'n', 'v'}, '<leader>y', '"+y')
+keymap.set({'n', 'v'}, '<leader>d', '"_d')
+
+keymap.set('n', '<C-n>', '<cmd>cnext<CR>zz')
+keymap.set('n', '<C-p>', '<cmd>cprev<CR>zz')
 
 keymap.set('n', '+', '<C-a>')
 keymap.set('n', '-', '<C-x>')
