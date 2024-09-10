@@ -18,6 +18,7 @@ packer.startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
     use 'nvim-tree/nvim-web-devicons'
+    use 'Olical/conjure'
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -52,20 +53,34 @@ packer.startup(function(use)
         end
     }
     use {
-        'sainnhe/gruvbox-material',
-        config = function()
-            vim.cmd [[
-                let g:gruvbox_material_foreground = 'original'
-                let g:gruvbox_material_background = 'hard'
-                let g:gruvbox_material_better_performance = 1
-                colorscheme gruvbox-material
-            ]]
-        end
-    }
-    use {
         'vladdoster/remember.nvim',
         config = function()
             require("remember")
+        end
+    }
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require("gitsigns").setup()
+        end
+    }
+    use {
+        'ellisonleao/gruvbox.nvim',
+        config = function()
+            require("gruvbox").setup({
+                contrast = "hard",
+                italic = {
+                    strings = false,
+                },
+                overrides = {
+                    ["@punctuation.bracket"] = { link = "GruvboxFg1" },
+                    ["@punctuation.delimiter"] = { link = "GruvboxGray" },
+                    GitSignsAdd = { link = "GruvboxGreenSign" },
+                    GitSignsChange = { link = "GruvboxOrangeSign" },
+                    GitSignsDelete = { link = "GruvboxRedSign" },
+                },
+            })
+            vim.cmd("colorscheme gruvbox")
         end
     }
 end)

@@ -3,10 +3,10 @@ import = [
 ]
 
 [font]
-size = 11.25
+size = 12.75
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "BerkeleyMono Nerd Font"
 
 [window.padding]
 x = 4

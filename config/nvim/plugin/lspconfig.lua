@@ -18,14 +18,19 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-nvim_lsp.tsserver.setup {
+nvim_lsp.ts_ls.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
 
 nvim_lsp.volar.setup {
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    init_options = {
+        vue = {
+            hybridMode = false
+        }
+    }
 }
 
 nvim_lsp.lua_ls.setup {
@@ -101,6 +106,11 @@ nvim_lsp.texlab.setup {
 }
 
 nvim_lsp.jdtls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+nvim_lsp.clojure_lsp.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
