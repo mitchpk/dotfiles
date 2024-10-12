@@ -18,7 +18,12 @@ packer.startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
     use 'nvim-tree/nvim-web-devicons'
-    use 'Olical/conjure'
+    use {
+        'Olical/conjure',
+        config = function()
+            vim.g["conjure#mapping#doc_word"] = "gk"
+        end
+    }
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
