@@ -68,9 +68,12 @@ packer.startup(function(use)
         'ellisonleao/gruvbox.nvim',
         config = function()
             require("gruvbox").setup({
-                contrast = "hard",
                 italic = {
                     strings = false,
+                    emphasis = false,
+                    comments = false,
+                    operators = false,
+                    folds = false,
                 },
                 overrides = {
                     ["@punctuation.bracket"] = { link = "GruvboxFg1" },
