@@ -75,10 +75,6 @@ packer.startup(function(use)
             require("gruvbox").setup({
                 italic = {
                     strings = false,
-                    emphasis = false,
-                    comments = false,
-                    operators = false,
-                    folds = false,
                 },
                 overrides = {
                     ["@punctuation.bracket"] = { link = "GruvboxFg1" },
