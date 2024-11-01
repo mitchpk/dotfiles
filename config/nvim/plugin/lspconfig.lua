@@ -1,30 +1,37 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
 
-local on_attach = function(client, bufnr)
-    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-    client.server_capabilities.semanticTokensProvider = nil
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+        local bufnr = args.buf
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client == nil then
+            return
+        end
 
-    local bufopts = { noremap = true, silent = true, buffer = bufnr }
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-    vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
-    vim.keymap.set('n', 'gR', vim.lsp.buf.rename, bufopts)
-end
+        client.server_capabilities.semanticTokensProvider = nil
+        if client.server_capabilities.completionProvider then
+            vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
+        end
+        if client.server_capabilities.definitionProvider then
+            vim.bo[bufnr].tagfunc = "v:lua.vim.lsp.tagfunc"
+        end
+
+        local bufopts = { noremap = true, silent = true, buffer = bufnr }
+        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+        vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+        vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+        vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
+        vim.keymap.set('n', 'gR', vim.lsp.buf.rename, bufopts)
+    end,
+})
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-nvim_lsp.ts_ls.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
-
 nvim_lsp.volar.setup {
-    on_attach = on_attach,
     capabilities = capabilities,
     init_options = {
         vue = {
@@ -34,7 +41,6 @@ nvim_lsp.volar.setup {
 }
 
 nvim_lsp.lua_ls.setup {
-    on_attach = on_attach,
     capabilities = capabilities,
     settings = {
         Lua = {
@@ -51,7 +57,6 @@ nvim_lsp.lua_ls.setup {
 }
 
 nvim_lsp.rust_analyzer.setup {
-    on_attach = on_attach,
     capabilities = capabilities,
     settings = {
         ['rust-analyzer'] = {
@@ -70,47 +75,42 @@ nvim_lsp.rust_analyzer.setup {
     }
 }
 
+nvim_lsp.ts_ls.setup {
+    capabilities = capabilities
+}
+
 nvim_lsp.clangd.setup {
-    on_attach = on_attach,
     capabilities = capabilities
 }
 
 nvim_lsp.gdscript.setup {
-    on_attach = on_attach,
     capabilities = capabilities
 }
 
 nvim_lsp.gopls.setup {
-    on_attach = on_attach,
     capabilities = capabilities
 }
 
 nvim_lsp.pyright.setup {
-    on_attach = on_attach,
     capabilities = capabilities
 }
 
 nvim_lsp.cssls.setup {
-    on_attach = on_attach,
     capabilities = capabilities
 }
 
 nvim_lsp.svelte.setup {
-    on_attach = on_attach,
     capabilities = capabilities
 }
 
 nvim_lsp.texlab.setup {
-    on_attach = on_attach,
     capabilities = capabilities
 }
 
 nvim_lsp.jdtls.setup {
-    on_attach = on_attach,
     capabilities = capabilities
 }
 
 nvim_lsp.clojure_lsp.setup {
-    on_attach = on_attach,
     capabilities = capabilities
 }

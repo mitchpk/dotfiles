@@ -1,40 +1,32 @@
-local status, packer = pcall(require, "packer")
-if (not status) then
-    print("Packer is not installed")
-    return
-end
-
-vim.cmd [[packadd packer.nvim]]
-
-packer.startup(function(use)
-    use 'wbthomason/packer.nvim'
-    use 'nvim-lualine/lualine.nvim'
-    use 'nvim-lua/plenary.nvim'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-path'
-    use 'neovim/nvim-lspconfig'
-    use 'L3MON4D3/LuaSnip'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'rafamadriz/friendly-snippets'
-    use 'nvim-tree/nvim-web-devicons'
-    use {
+return {
+    'wbthomason/packer.nvim',
+    'nvim-lualine/lualine.nvim',
+    'nvim-lua/plenary.nvim',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-path',
+    'neovim/nvim-lspconfig',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    'rafamadriz/friendly-snippets',
+    'nvim-tree/nvim-web-devicons',
+    {
         'Olical/conjure',
         config = function()
             vim.g["conjure#mapping#doc_word"] = "gk"
         end
-    }
-    use {
+    },
+    {
         'nvim-treesitter/nvim-treesitter',
         run = function()
             require('nvim-treesitter.install').update({
                 with_sync = true
             })
         end
-    }
-    use 'nvim-telescope/telescope.nvim'
-    use 'nvim-telescope/telescope-file-browser.nvim'
-    use {
+    },
+    'nvim-telescope/telescope.nvim',
+    'nvim-telescope/telescope-file-browser.nvim',
+    {
         'windwp/nvim-autopairs',
         config = function()
             require("nvim-autopairs").setup({
@@ -42,34 +34,34 @@ packer.startup(function(use)
                 enable_check_bracket_line = false,
             })
         end
-    }
-    use {
+    },
+    {
         'norcalli/nvim-colorizer.lua',
         config = function()
             require("colorizer").setup({
                 '*';
             })
         end
-    }
-    use {
+    },
+    {
         'numToStr/Comment.nvim',
         config = function()
             require("Comment").setup()
         end
-    }
-    use {
+    },
+    {
         'vladdoster/remember.nvim',
         config = function()
             require("remember")
         end
-    }
-    use {
+    },
+    {
         'lewis6991/gitsigns.nvim',
         config = function()
             require("gitsigns").setup()
         end
-    }
-    use {
+    },
+    {
         'ellisonleao/gruvbox.nvim',
         config = function()
             require("gruvbox").setup({
@@ -86,5 +78,12 @@ packer.startup(function(use)
             })
             vim.cmd("colorscheme gruvbox")
         end
+    },
+    {
+        'seblj/roslyn.nvim',
+        ft = 'cs',
+        config = function()
+            require("roslyn").setup()
+        end
     }
-end)
+}
