@@ -76,14 +76,38 @@ return {
                     GitSignsDelete = { link = "GruvboxRedSign" },
                 },
             })
-            vim.cmd("colorscheme gruvbox")
+            --vim.cmd("colorscheme gruvbox")
         end
     },
     {
-        'seblj/roslyn.nvim',
-        ft = 'cs',
+        "zenbones-theme/zenbones.nvim",
+        dependencies = "rktjmp/lush.nvim",
+        lazy = false,
+        priority = 1000,
         config = function()
-            require("roslyn").setup()
+            vim.api.nvim_create_autocmd({ "ColorScheme" }, {
+                pattern = "zenburned",
+                callback = function(params)
+                    local base = require(params.match)
+                    vim.api.nvim_set_hl(0, "Comment", { fg = "#44b340" })
+                    vim.api.nvim_set_hl(0, "Constant", { fg = "#2ec09c" })
+                    vim.api.nvim_set_hl(0, "Type", { fg = "#8cde94" })
+                    vim.api.nvim_set_hl(0, "Boolean", { fg = "#7ad0c6" })
+                    vim.api.nvim_set_hl(0, "Number", { fg = "#7ad0c6" })
+                    vim.api.nvim_set_hl(0, "Special", { fg = "#8cde94"  })
+                    vim.api.nvim_set_hl(0, "PreProc", { fg = "#8cde94"  })
+                    vim.api.nvim_set_hl(0, "Statement", { fg = base.Function.fg.hex })
+                    vim.api.nvim_set_hl(0, "Delimiter", { fg = base.Identifier.fg.hex })
+                    vim.api.nvim_set_hl(0, "Function", { fg = base.Identifier.fg.hex })
+                end,
+            })
+
+            vim.g.zenburned = {
+                transparent_background = true,
+                italic_comments = false
+            }
+
+            vim.cmd.colorscheme('zenburned')
         end
     }
 }

@@ -1,12 +1,13 @@
+[general]
 import = [
     "~/.config/alacritty/theme.toml"
 ]
 
 [font]
-size = 12.75
+size = 15.75
 
 [font.normal]
-family = "BerkeleyMono Nerd Font"
+family = "IosevkaTerm Nerd Font"
 
 [window.padding]
 x = 4
