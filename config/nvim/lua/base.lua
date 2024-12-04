@@ -4,8 +4,6 @@ vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
-vim.wo.number = true
-
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
@@ -16,7 +14,7 @@ vim.opt.showmode = false
 vim.opt.cmdheight = 1
 vim.opt.expandtab = true
 vim.opt.scrolloff = 5
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'no'
 vim.opt.updatetime = 50
 vim.opt.guicursor = ''
 vim.opt.shell = 'fish'
@@ -50,4 +48,12 @@ end
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = '*',
     callback = remove_whitespace
+})
+
+vim.diagnostic.config({
+    virtual_text = false,
+    signs = false,
+    update_in_insert = false,
+    underline = false,
+    severity_sort = false,
 })

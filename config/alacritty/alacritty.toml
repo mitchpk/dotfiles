@@ -10,8 +10,8 @@ size = 15.75
 family = "IosevkaTerm Nerd Font"
 
 [window.padding]
-x = 4
-y = 4
+x = 8
+y = 8
 
 [mouse]
 hide_when_typing = true
