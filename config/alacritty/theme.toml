@@ -1,15 +1,11 @@
-# Colors (Gruvbox dark)
-
 # Default colors
 [colors.primary]
-# hard contrast background = = '#1d2021'
-background = '#062329'
-# soft contrast background = = '#32302f'
-foreground = '#d5be95'
+background = '#062626'
+foreground = '#deccaf'
 
 # Normal colors
 [colors.normal]
-black   = '#282828'
+black   = '#062626'
 red     = '#cc241d'
 green   = '#98971a'
 yellow  = '#d79921'
