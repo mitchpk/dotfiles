@@ -79,8 +79,13 @@ nvim_lsp.ts_ls.setup {
     capabilities = capabilities
 }
 
-nvim_lsp.clangd.setup {
-    capabilities = capabilities
+nvim_lsp.ccls.setup {
+    capabilities = capabilities,
+    init_options = {
+        completion = {
+            detailedLabel = false
+        }
+    }
 }
 
 nvim_lsp.gdscript.setup {
