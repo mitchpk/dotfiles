@@ -13,15 +13,15 @@ highlight! link Directory Default
 highlight! Visual guibg=#43504a
 highlight! Search guibg=#6c6e60 guifg=#deccaf gui=NONE
 highlight! CurSearch guibg=#deccaf guifg=#062626
-highlight! IncSearch guibg=#deccaf guifg=#062626
 highlight! link MatchParen Search
 highlight! NormalFloat guibg=#1a3234 guifg=#deccaf gui=NONE
 highlight! link Pmenu NormalFloat
-highlight! PmenuSel guibg=#666f68 guifg=#deccaf
-highlight! link PmenuSbar PmenuSel
-highlight! VertSplit guifg=#062626
-highlight! MoreMsg guifg=#99f6a1
-highlight! Question guifg=#99f6a1
+highlight! link PmenuSel CurSearch
+highlight! link PmenuSbar Visual
+highlight! link PmenuThumb Search
+highlight! WinSeparator guifg=#d3b48c
+highlight! link MoreMsg Type
+highlight! link Question Type
 highlight! link Title Default
 
 highlight! Comment guifg=#43da29 guibg=NONE gui=NONE
