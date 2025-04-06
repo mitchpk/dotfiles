@@ -1,5 +1,4 @@
 return {
-    'wbthomason/packer.nvim',
     'nvim-lua/plenary.nvim',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/nvim-cmp',

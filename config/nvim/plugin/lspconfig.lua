@@ -77,6 +77,10 @@ nvim_lsp.rust_analyzer.setup {
     }
 }
 
+nvim_lsp.ocamllsp.setup {
+    capabilities = capabilities
+}
+
 nvim_lsp.ts_ls.setup {
     capabilities = capabilities
 }

@@ -4,14 +4,14 @@ import = [
 ]
 
 [font]
-size = 15.75
+size = 15.0
 
 [font.normal]
-family = "IosevkaTerm Nerd Font"
+family = "MesloLGM Nerd Font"
 
 [window.padding]
-x = 8
-y = 8
+x = 4
+y = 4
 
 [mouse]
 hide_when_typing = true
