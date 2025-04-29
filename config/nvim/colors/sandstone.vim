@@ -48,17 +48,23 @@ highlight! link Tag Type
 highlight! link @tag.delimiter Type
 highlight! link @tag.attribute Default
 
-highlight! ErrorMsg guifg=#F92672
-highlight! Error guifg=#F92672
-highlight! DiagnosticError guifg=#F92672
-highlight! DiagnosticVirtualTextError guibg=#1f2025 guifg=#F92672
-highlight! WarningMsg guifg=#E6DB74
-highlight! DiagnosticWarn guifg=#E6DB74
-highlight! DiagnosticVirtualTextWarn guibg=#1f3425 guifg=#E6DB74
-highlight! DiagnosticInfo guifg=#66D9EF
-highlight! DiagnosticVirtualTextInfo guibg=#05343e guifg=#66D9EF
-highlight! DiagnosticHint guifg=#A1EFE4
-highlight! DiagnosticVirtualTextHint guibg=#05393e guifg=#A1EFE4
-highlight! DiagnosticOk guifg=#A6E22E
+highlight! ErrorMsg guifg=#aa3731
+highlight! Error guifg=#aa3731
+highlight! DiagnosticError guifg=#aa3731
+highlight! DiagnosticUnderlineError gui=undercurl
+highlight! DiagnosticVirtualTextError guibg=#f3f0e9 guifg=#aa3731
+highlight! WarningMsg guifg=#cb9000
+highlight! DiagnosticWarn guifg=#cb9000
+highlight! DiagnosticUnderlineWarn gui=undercurl
+highlight! DiagnosticVirtualTextWarn guibg=#f3f0e9 guifg=#cb9000
+highlight! DiagnosticInfo guifg=#325cc0
+highlight! DiagnosticUnderlineInfo gui=undercurl
+highlight! DiagnosticVirtualTextInfo guibg=#f3f0e9 guifg=#325cc0
+highlight! DiagnosticHint guifg=#0083b2
+highlight! DiagnosticUnderlineHint gui=undercurl
+highlight! DiagnosticVirtualTextHint guibg=#f3f0e9 guifg=#0083b2
+highlight! DiagnosticOk guifg=#448c27
+highlight! DiagnosticUnnecessary guifg=#373737
+
 
 highlight! TelescopeSelection guibg=#dddad3
