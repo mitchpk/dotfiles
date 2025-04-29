@@ -47,14 +47,19 @@ highlight! link @tag.attribute Default
 highlight! ErrorMsg guifg=#F92672
 highlight! Error guifg=#F92672
 highlight! DiagnosticError guifg=#F92672
+highlight! DiagnosticUnderlineError gui=undercurl
 highlight! DiagnosticVirtualTextError guibg=#1f2025 guifg=#F92672
 highlight! WarningMsg guifg=#E6DB74
 highlight! DiagnosticWarn guifg=#E6DB74
+highlight! DiagnosticUnderlineWarn gui=undercurl
 highlight! DiagnosticVirtualTextWarn guibg=#1f3425 guifg=#E6DB74
 highlight! DiagnosticInfo guifg=#66D9EF
+highlight! DiagnosticUnderlineInfo gui=undercurl
 highlight! DiagnosticVirtualTextInfo guibg=#05343e guifg=#66D9EF
 highlight! DiagnosticHint guifg=#A1EFE4
+highlight! DiagnosticUnderlineHint gui=undercurl
 highlight! DiagnosticVirtualTextHint guibg=#05393e guifg=#A1EFE4
 highlight! DiagnosticOk guifg=#A6E22E
+highlight! DiagnosticUnnecessary guifg=#6c6e60
 
 highlight! TelescopeSelection guibg=#43504a

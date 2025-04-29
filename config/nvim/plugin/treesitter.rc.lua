@@ -9,7 +9,7 @@ ts.setup {
     },
     indent = {
         enable = true,
-        disable = {},
+        disable = { 'ocaml' },
     },
     auto_install = true,
     autotag = {
