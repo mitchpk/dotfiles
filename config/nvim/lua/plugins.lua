@@ -37,7 +37,7 @@ return {
                     ['@variable.member'] = { link = "GruvboxFg1" },
                 }
             })
-            --vim.cmd.colorscheme('gruvbox')
+            vim.cmd.colorscheme('gruvbox')
         end
     },
     {

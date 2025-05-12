@@ -1,23 +1,30 @@
+# Colors (Gruvbox dark)
+
+# Default colors
 [colors.primary]
-background = '#f3f0e9'
-foreground = '#000000'
+# hard contrast background = = '#1d2021'
+background = '#282828'
+# soft contrast background = = '#32302f'
+foreground = '#ebdbb2'
 
+# Normal colors
 [colors.normal]
-black = '#000000'
-red = '#AA3731'
-green = '#448C27'
-yellow = '#CB9000'
-blue = '#325CC0'
-magenta = '#7A3E9D'
-cyan = '#0083B2'
-white = '#BBBBBB'
+black   = '#282828'
+red     = '#cc241d'
+green   = '#98971a'
+yellow  = '#d79921'
+blue    = '#458588'
+magenta = '#b16286'
+cyan    = '#689d6a'
+white   = '#a89984'
 
+# Bright colors
 [colors.bright]
-black = '#777777'
-red = '#F05050'
-green = '#60CB00'
-yellow = '#FFBC5D'
-blue = '#007ACC'
-magenta = '#E64CE6'
-cyan = '#00AACB'
-white = '#FFFFFF'
+black   = '#928374'
+red     = '#fb4934'
+green   = '#b8bb26'
+yellow  = '#fabd2f'
+blue    = '#83a598'
+magenta = '#d3869b'
+cyan    = '#8ec07c'
+white   = '#ebdbb2'

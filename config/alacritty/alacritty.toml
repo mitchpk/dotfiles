@@ -4,10 +4,10 @@ import = [
 ]
 
 [font]
-size = 15.0
+size = 16.0
 
 [font.normal]
-family = "MesloLGM Nerd Font"
+family = "FiraCode Nerd Font"
 
 [window.padding]
 x = 4
