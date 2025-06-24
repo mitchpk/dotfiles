@@ -10,6 +10,29 @@ return {
     'nvim-tree/nvim-web-devicons',
     'ramojus/mellifluous.nvim',
     {
+        'EdenEast/nightfox.nvim',
+        config = function()
+            require('nightfox').setup {
+                specs = {
+                    all = {
+                        syntax = {
+                            operator = "orange",
+                            number = "fg",
+                            field = "fg"
+                        }
+                    }
+                },
+                groups = {
+                    all = {
+                        ['@function.call'] = { fg = "fg" },
+                        ['@variable.parameter'] = { fg = "fg" }
+                    }
+                }
+            }
+            vim.cmd.colorscheme('nightfox')
+        end
+    },
+    {
         "zenbones-theme/zenbones.nvim",
         -- Optionally install Lush. Allows for more configuration or extending the colorscheme
         -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
@@ -37,7 +60,7 @@ return {
                     ['@variable.member'] = { link = "GruvboxFg1" },
                 }
             })
-            vim.cmd.colorscheme('gruvbox')
+            --vim.cmd.colorscheme('gruvbox')
         end
     },
     {

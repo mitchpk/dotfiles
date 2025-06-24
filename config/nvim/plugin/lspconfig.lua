@@ -125,3 +125,7 @@ nvim_lsp.jdtls.setup {
 nvim_lsp.clojure_lsp.setup {
     capabilities = capabilities
 }
+
+nvim_lsp.hls.setup {
+    capabilities = capabilities
+}

@@ -46,7 +46,8 @@ cmp.setup({
         end, { "i", "s" }),
     },
     completion = {
-        completeopt = 'menuone,noinsert'
+        completeopt = 'menuone,noinsert',
+        autocomplete = false
     },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
