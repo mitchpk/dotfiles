@@ -4,7 +4,7 @@ import = [
 ]
 
 [font]
-size = 16.25
+size = 14.625
 
 [font.normal]
 family = "FiraCode Nerd Font"
