@@ -4,10 +4,11 @@ import = [
 ]
 
 [font]
-size = 14.625
+size = 16.25
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "Fira Code"
+style = "Regular"
 
 [window.dimensions]
 columns = 80

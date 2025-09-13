@@ -26,8 +26,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
         vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
         vim.keymap.set('n', 'gR', vim.lsp.buf.rename, bufopts)
-        vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, bufopts)
-        vim.keymap.set('n', ']d', vim.diagnostic.goto_next, bufopts)
+        vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end, bufopts)
+        vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1,  float = true }) end, bufopts)
     end,
 })
 
@@ -85,13 +85,8 @@ nvim_lsp.ts_ls.setup {
     capabilities = capabilities
 }
 
-nvim_lsp.ccls.setup {
-    capabilities = capabilities,
-    init_options = {
-        completion = {
-            detailedLabel = false
-        }
-    }
+nvim_lsp.clangd.setup {
+    capabilities = capabilities
 }
 
 nvim_lsp.gdscript.setup {
