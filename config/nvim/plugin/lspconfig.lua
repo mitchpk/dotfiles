@@ -1,6 +1,3 @@
-local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
-
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         local bufnr = args.buf
@@ -33,16 +30,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-nvim_lsp.volar.setup {
-    capabilities = capabilities,
-    init_options = {
-        vue = {
-            hybridMode = false
-        }
-    }
-}
-
-nvim_lsp.lua_ls.setup {
+vim.lsp.config('lua_ls', {
     capabilities = capabilities,
     settings = {
         Lua = {
@@ -56,9 +44,10 @@ nvim_lsp.lua_ls.setup {
             },
         },
     },
-}
+})
+vim.lsp.enable('lua_ls')
 
-nvim_lsp.rust_analyzer.setup {
+vim.lsp.config('rust_analyzer', {
     capabilities = capabilities,
     settings = {
         ['rust-analyzer'] = {
@@ -75,52 +64,70 @@ nvim_lsp.rust_analyzer.setup {
             },
         }
     }
-}
+})
+vim.lsp.enable('rust_analyzer')
 
-nvim_lsp.ocamllsp.setup {
+vim.lsp.config('ocamllsp', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('ocamllsp')
 
-nvim_lsp.ts_ls.setup {
+vim.lsp.config('vue_ls', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('vue_ls')
 
-nvim_lsp.clangd.setup {
+vim.lsp.config('ts_ls', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('ts_ls')
 
-nvim_lsp.gdscript.setup {
+vim.lsp.config('clangd', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('clangd')
 
-nvim_lsp.gopls.setup {
+vim.lsp.config('gdscript', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('gdscript')
 
-nvim_lsp.pyright.setup {
+vim.lsp.config('gopls', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('gopls')
 
-nvim_lsp.cssls.setup {
+vim.lsp.config('pyright', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('pyright')
 
-nvim_lsp.svelte.setup {
+vim.lsp.config('cssls', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('cssls')
 
-nvim_lsp.texlab.setup {
+vim.lsp.config('svelte', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('svelte')
 
-nvim_lsp.jdtls.setup {
+vim.lsp.config('texlab', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('texlab')
 
-nvim_lsp.clojure_lsp.setup {
+vim.lsp.config('jdtls', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('jdtls')
 
-nvim_lsp.hls.setup {
+vim.lsp.config('clojure_lsp', {
     capabilities = capabilities
-}
+})
+vim.lsp.enable('clojure_lsp')
+
+vim.lsp.config('hls', {
+    capabilities = capabilities
+})
+vim.lsp.enable('hls')
