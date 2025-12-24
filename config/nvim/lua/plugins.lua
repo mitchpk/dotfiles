@@ -26,12 +26,6 @@ return {
         end
     },
     {
-        'Olical/conjure',
-        config = function()
-            vim.g["conjure#mapping#doc_word"] = "gk"
-        end
-    },
-    {
         'nvim-treesitter/nvim-treesitter',
         run = function()
             require('nvim-treesitter.install').update({

@@ -131,3 +131,50 @@ vim.lsp.config('hls', {
     capabilities = capabilities
 })
 vim.lsp.enable('hls')
+
+vim.lsp.config('roslyn_ls', {
+    capabilities = capabilities,
+    root_dir = function(bufnr, cb)
+        local bufname = vim.api.nvim_buf_get_name(bufnr)
+        if not bufname:match('MetadataAsSource/') then
+            local root_dir = vim.fs.root(bufnr, function(fname, _)
+                return fname:match('%.sln[x]?$') ~= nil
+            end)
+
+            if not root_dir then
+                root_dir = vim.fs.root(bufnr, function(fname, _)
+                    return fname:match('%.csproj$') ~= nil
+                end)
+            end
+
+            if root_dir then
+                cb(root_dir)
+            end
+        else
+            local prev_buf = vim.fn.bufnr('#')
+            local client = vim.lsp.get_clients({
+                name = 'roslyn_ls',
+                bufnr = prev_buf ~= -1 and prev_buf or nil,
+            })[1]
+            if client then
+                cb(client.config.root_dir)
+            end
+        end
+    end,
+    handlers = {
+        ["textDocument/diagnostic"] = function(err, result, ctx, config)
+            if result and result.items then
+                local bufname = vim.api.nvim_buf_get_name(ctx.bufnr)
+
+                if bufname:match('MetadataAsSource/') then
+                    -- Return empty diagnostics for metadata files
+                    result.items = {}
+                end
+            end
+
+            return vim.lsp.handlers["textDocument/diagnostic"](err, result, ctx, config)
+        end,
+    },
+})
+
+vim.lsp.enable('roslyn_ls')
