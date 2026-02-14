@@ -1,3 +1,11 @@
+vim.keymap.del('n', 'grn')
+vim.keymap.del({'n', 'v'}, 'gra')
+vim.keymap.del('n', 'grr')
+vim.keymap.del('n', 'gri')
+vim.keymap.del('n', 'grt')
+vim.keymap.del('n', 'gO')
+vim.keymap.del('i', '<C-s>')
+
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         local bufnr = args.buf
@@ -19,9 +27,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
         vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-        vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+        vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, bufopts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-        vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
+        vim.keymap.set({'n', 'v'}, 'ga', vim.lsp.buf.code_action, bufopts)
         vim.keymap.set('n', 'gR', vim.lsp.buf.rename, bufopts)
         vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end, bufopts)
         vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1,  float = true }) end, bufopts)
@@ -178,3 +186,13 @@ vim.lsp.config('roslyn_ls', {
 })
 
 vim.lsp.enable('roslyn_ls')
+
+vim.lsp.config('fsautocomplete', {
+    capabilities = capabilities
+})
+vim.lsp.enable('fsautocomplete')
+
+vim.lsp.config('dartls', {
+    capabilities = capabilities
+})
+vim.lsp.enable('dartls')

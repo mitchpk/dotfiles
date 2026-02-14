@@ -4,4 +4,4 @@ SETUVAR DOTNET_CLI_TELEMETRY_OPTOUT:1
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:\x1d
 SETUVAR fish_prompt_pwd_dir_length:0
-SETUVAR fish_user_paths:/Users/mitchell/\x2ecargo/bin\x1e/Users/mitchell/\x2elocal/bin
+SETUVAR fish_user_paths:/Users/mitchell/\x2edotnet/tools\x1e/Users/mitchell/\x2ecargo/bin\x1e/Users/mitchell/\x2elocal/bin

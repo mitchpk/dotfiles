@@ -35,15 +35,7 @@ return {
     },
     'nvim-telescope/telescope.nvim',
     'nvim-telescope/telescope-file-browser.nvim',
-    {
-        'windwp/nvim-autopairs',
-        config = function()
-            require("nvim-autopairs").setup({
-                disable_filetype = { "TelescopePrompt", "vim" },
-                enable_check_bracket_line = false,
-            })
-        end
-    },
+    'windwp/nvim-autopairs',
     {
         'norcalli/nvim-colorizer.lua',
         config = function()
