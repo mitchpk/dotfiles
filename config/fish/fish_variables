@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR DOTNET_CLI_TELEMETRY_OPTOUT:1
+SETUVAR OLS_BUILTIN_FOLDER:/Users/mitchell/\x2elocal/share/ols/builtin
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:\x1d
 SETUVAR fish_prompt_pwd_dir_length:0

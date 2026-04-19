@@ -27,23 +27,13 @@ return {
     },
     {
         'nvim-treesitter/nvim-treesitter',
-        run = function()
-            require('nvim-treesitter.install').update({
-                with_sync = true
-            })
-        end
+        branch = "main",
+        lazy = false,
+        build = ":TSUpdate"
     },
     'nvim-telescope/telescope.nvim',
     'nvim-telescope/telescope-file-browser.nvim',
     'windwp/nvim-autopairs',
-    {
-        'norcalli/nvim-colorizer.lua',
-        config = function()
-            require("colorizer").setup({
-                '*';
-            })
-        end
-    },
     {
         'numToStr/Comment.nvim',
         config = function()
