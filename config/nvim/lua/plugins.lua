@@ -1,12 +1,24 @@
 return {
     'nvim-lua/plenary.nvim',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-path',
+    {
+      'saghen/blink.cmp',
+      dependencies = { 'rafamadriz/friendly-snippets' },
+      version = '1.*',
+
+      opts = {
+        keymap = { preset = 'default' },
+        appearance = {
+          nerd_font_variant = 'mono'
+        },
+        completion = { documentation = { auto_show = false } },
+        sources = {
+          default = { 'lsp', 'path', 'snippets' },
+        },
+        fuzzy = { implementation = "prefer_rust_with_warning" }
+      },
+      opts_extend = { "sources.default" }
+    },
     'neovim/nvim-lspconfig',
-    'L3MON4D3/LuaSnip',
-    'saadparwaiz1/cmp_luasnip',
-    'rafamadriz/friendly-snippets',
     'nvim-tree/nvim-web-devicons',
     {
         'ellisonleao/gruvbox.nvim',
@@ -25,6 +37,7 @@ return {
             vim.cmd.colorscheme('gruvbox')
         end
     },
+    'folke/tokyonight.nvim',
     {
         'nvim-treesitter/nvim-treesitter',
         branch = "main",

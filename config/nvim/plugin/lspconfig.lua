@@ -37,10 +37,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = require('blink.cmp').get_lsp_capabilities({
+  textDocument = { completion = { completionItem = { snippetSupport = false } } },
+})
+
+vim.lsp.config('*', { capabilities = capabilities })
 
 vim.lsp.config('lua_ls', {
-    capabilities = capabilities,
     settings = {
         Lua = {
             diagnostics = {
@@ -54,10 +57,8 @@ vim.lsp.config('lua_ls', {
         },
     },
 })
-vim.lsp.enable('lua_ls')
 
 vim.lsp.config('rust_analyzer', {
-    capabilities = capabilities,
     settings = {
         ['rust-analyzer'] = {
             completion = {
@@ -74,75 +75,8 @@ vim.lsp.config('rust_analyzer', {
         }
     }
 })
-vim.lsp.enable('rust_analyzer')
-
-vim.lsp.config('ocamllsp', {
-    capabilities = capabilities
-})
-vim.lsp.enable('ocamllsp')
-
-vim.lsp.config('vue_ls', {
-    capabilities = capabilities
-})
-vim.lsp.enable('vue_ls')
-
-vim.lsp.config('ts_ls', {
-    capabilities = capabilities
-})
-vim.lsp.enable('ts_ls')
-
-vim.lsp.config('clangd', {
-    capabilities = capabilities
-})
-vim.lsp.enable('clangd')
-
-vim.lsp.config('gdscript', {
-    capabilities = capabilities
-})
-vim.lsp.enable('gdscript')
-
-vim.lsp.config('gopls', {
-    capabilities = capabilities
-})
-vim.lsp.enable('gopls')
-
-vim.lsp.config('pyright', {
-    capabilities = capabilities
-})
-vim.lsp.enable('pyright')
-
-vim.lsp.config('cssls', {
-    capabilities = capabilities
-})
-vim.lsp.enable('cssls')
-
-vim.lsp.config('svelte', {
-    capabilities = capabilities
-})
-vim.lsp.enable('svelte')
-
-vim.lsp.config('texlab', {
-    capabilities = capabilities
-})
-vim.lsp.enable('texlab')
-
-vim.lsp.config('jdtls', {
-    capabilities = capabilities
-})
-vim.lsp.enable('jdtls')
-
-vim.lsp.config('clojure_lsp', {
-    capabilities = capabilities
-})
-vim.lsp.enable('clojure_lsp')
-
-vim.lsp.config('hls', {
-    capabilities = capabilities
-})
-vim.lsp.enable('hls')
 
 vim.lsp.config('roslyn_ls', {
-    capabilities = capabilities,
     root_dir = function(bufnr, cb)
         local bufname = vim.api.nvim_buf_get_name(bufnr)
         if not bufname:match('MetadataAsSource/') then
@@ -186,19 +120,24 @@ vim.lsp.config('roslyn_ls', {
     },
 })
 
-vim.lsp.enable('roslyn_ls')
-
-vim.lsp.config('fsautocomplete', {
-    capabilities = capabilities
+vim.lsp.enable({
+    'lua_ls',
+    'rust_analyzer',
+    'ocamllsp',
+    'vue_ls',
+    'ts_ls',
+    'clangd',
+    'gdscript',
+    'gopls',
+    'pyright',
+    'cssls',
+    'svelte',
+    'texlab',
+    'jdtls',
+    'clojure_lsp',
+    'hls',
+    'roslyn_ls',
+    'fsautocomplete',
+    'dartls',
+    'ols',
 })
-vim.lsp.enable('fsautocomplete')
-
-vim.lsp.config('dartls', {
-    capabilities = capabilities
-})
-vim.lsp.enable('dartls')
-
-vim.lsp.config('ols', {
-    capabilities = capabilities
-})
-vim.lsp.enable('ols')
