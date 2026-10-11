@@ -1,5 +1,6 @@
 font-family = Fira Code
-font-size = 15
+font-feature = -calt
+font-size = 13
 window-padding-x = 8
 window-padding-y = 8
 window-padding-color = extend
